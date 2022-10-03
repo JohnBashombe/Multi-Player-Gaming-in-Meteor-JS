@@ -1,0 +1,2554 @@
+<head>
+    <title> ntavigwa </title>
+    <link rel="shortcut icon" href="ntavigwa-logo.png" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="google-site-verification" content="GZ82CZej8jhQsQ5W0UciBzibfj_HgBPJavhOEPdXcWM" />
+    <meta name="description" content="Win bitcoins on our platform simply by choosing exactly someone's second and
+    third choices knowing already his first choice. Try our challenge feature that allows you to win beyond 
+    your own effort. There is no limit on profit, bonus, deposit and withdraw">
+    <meta name="keywords" content="ntavigwa, ntavigwa.com, ntavigwa website, ntavigwa official website,
+    ntavigwa challenge, how to win bitcoins, bitcoins winning, winning bitcoins easily, how to get free bitcoins,
+    bitcoin challenge, bitcoins online challenge,ntavigwa games, ntavigwa withdraw, ntavigwa deposit,
+    ntavigwa how to play, best bitcoins gambling sites, win free cryptocurrency, online games with cryptocurrency, 
+    online bitcoins games, ntavigwa platform, ntavigwa online platform">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta property="og:title" content="ntavigwa">
+    <meta property="og:site_name" content="ntavigwa">
+    <meta property="og:url" content="https://ntavigwa.com">
+    <meta property="og:description" content="Win bitcoins on our platform simply by choosing exactly someone's second and
+    third choices knowing already his first choice. Try our challenge feature that allows you to win beyond 
+    your own effort. There is no limit on profit, bonus, deposit and withdraw">
+    <meta property="og:image" content="logo.png">
+    <meta name="apple-mobile-web-app-title" content="ntavigwa">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+</head>
+
+<body>
+    <div class="container">{{> menu}}</div>
+</body><template name="main_layout">{{> yield}}</template><template name="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<div class="card">
+                    <div class="card-body woh-font">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <h6 class="text-dark animated lightSpeedIn" id="labelChanger">
+                                            <b>
+                                                {{#if loadNone}}
+                                                <span class="text-left text-warning">MAX: 0 </span>
+                                                {{else}}
+                                                <span class="text-left text-warning">MAX: {{loadMaxGames}} </span>
+                                                {{/if}}
+                                            </b>
+                                        </h6>
+                                    </div>
+                                    <div class="col-7">
+                                        <h6 class="text-dark">
+                                            <span class="pull-right">
+                                                <a href="" id="show-quick-help">
+                                                    {{#if quickhelp}}
+                                                    <b class="text-danger myGames-link"> Quick Help
+                                                        <i class="fas fa-arrow-down"></i>
+                                                    </b>
+                                                    {{else}}
+                                                    <b class="text-primary myGames-link"> Quick Help </b>
+                                                    {{/if}}
+                                                </a>
+                                            </span>
+                                        </h6>
+                                    </div>
+                                    <div class="col-12 text-center mb-3">
+                                        <div class="row">
+                                            <div class="col-1 hidden-xs hidden-xxs pt-3">
+                                                <div class="w-20">
+                                                    {{#if loadNone}}
+                                                    <h4 class="font-30 menu-list text-success dismiss">
+                                                        <i class="fas fa-mouse-pointer pr-0"></i>
+                                                    </h4>
+                                                    {{else}}
+                                                    <h4 class="font-30 menu-list text-success" id="select">
+                                                        <i class="fas fa-mouse-pointer pr-0"></i>
+                                                    </h4>
+                                                    {{/if}}
+                                                </div>
+                                                <div class="w-20 pt-2">
+                                                    <h4 class="font-30 menu-list" id="stats">
+                                                        {{#if showStatistics}}
+                                                        <i class="fas fa-chart-bar text-success"></i>
+                                                        {{else}}
+                                                        <i class="fas fa-chart-bar text-info"></i>
+                                                        {{/if}}
+                                                    </h4>
+                                                </div>
+                                                <div class="w-20 pt-2">
+                                                    {{#if loadNone}}
+                                                    <h4 class="font-30 menu-list dismiss">
+                                                        <i class="fas fa-times text-danger"></i>
+                                                    </h4>
+                                                    {{else}}
+                                                    <h4 class="font-30 menu-list" id="cancel">
+                                                        <i class="fas fa-times text-danger"></i>
+                                                    </h4>
+                                                    {{/if}}
+                                                </div>
+                                            </div>
+                                            {{loadGame}}
+                                            <div class="div-input pt-3">
+                                                {{#if loadNone}}
+                                                <div class="WOH_Game_Pane">
+                                                    <div id="blue-side" class="blue-side z-depth-3">
+                                                        <div class="wohBlue-scene">
+                                                            <div class="wohBlue">
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                            </div>
+                                                            <div class="num-blue">
+                                                                <p class="text-dark">
+                                                                    <i class="fas fa-question 
+                                                                    animated heartBeat infinite"></i>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="purple-side" class="purple-side z-depth-3">
+                                                        <div class="wohPurple-scene">
+                                                            <div class="wohPurple">
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                            </div>
+                                                            <div class="num-purple">
+                                                                <p class="text-dark">
+                                                                    <i class="fas fa-question 
+                                                                     animated heartBeat infinite"></i>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="green-side" class="green-side text-center z-depth-3">
+                                                        <div class="wohGreen-scene">
+                                                            <div class="wohGreen">
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                            </div>
+                                                            <div class="num-green text-dark">
+                                                                <p class="text-dark pt-1">
+                                                                    <i class="fas fa-question
+                                                                      animated heartBeat infinite"></i>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{else}}
+                                                <div class="WOH_Game_Pane">
+                                                    <div id="blue-side" class="blue-side z-depth-3">
+                                                        <div class="wohBlue-scene">
+                                                            <div class="wohBlue">
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle wohBlue-border"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                                <div class="wohBlue-circle"></div>
+                                                            </div>
+                                                            <div class="num-blue">
+                                                                {{#if blueOne}}
+                                                                <p class="animated pulse infinite text-dark"> 1 </p>
+                                                                {{else}}
+                                                                {{#if secondExist}}
+                                                                <p class="animated pulse infinite text-dark">
+                                                                    {{loadBlue}}
+                                                                </p>
+                                                                {{else}}
+                                                                <p class="text-dark">
+                                                                    <i class="fas fa-question
+                                                                     animated heartBeat infinite"></i>
+                                                                </p>
+                                                                {{/if}}
+                                                                {{/if}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="purple-side" class="purple-side z-depth-3">
+                                                        <div class="wohPurple-scene">
+                                                            <div class="wohPurple">
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle wohPurple-border"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                                <div class="wohPurple-circle"></div>
+                                                            </div>
+                                                            <div class="num-purple">
+                                                                {{#if purpleOne}}
+                                                                <p class="animated pulse infinite text-dark ml-2">
+                                                                    1
+                                                                </p>
+                                                                {{else}}
+                                                                {{#if secondExist}}
+                                                                <p class="animated pulse infinite text-dark ml-1">
+                                                                    {{loadPurple}}
+                                                                </p>
+                                                                {{else}}
+                                                                <p class="text-dark mt-1">
+                                                                    <i class="fas fa-question 
+                                                                    animated heartBeat infinite"></i>
+                                                                </p>
+                                                                {{/if}}
+                                                                {{/if}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="green-side" class="green-side text-center z-depth-3">
+                                                        <div class="wohGreen-scene">
+                                                            <div class="wohGreen">
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle wohGreen-border"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                                <div class="wohGreen-circle"></div>
+                                                            </div>
+                                                            <div class="num-green text-dark">
+                                                                {{#if greenOne}}
+                                                                <p class="animated pulse infinite text-dark">
+                                                                    1
+                                                                </p>
+                                                                {{else}}
+                                                                {{#if secondExist}}
+                                                                <p class="animated pulse infinite text-dark">
+                                                                    {{loadGreen}}
+                                                                </p>
+                                                                {{else}}
+                                                                <p class="text-dark mt-1">
+                                                                    <i class="fas fa-question animated
+                                                                     heartBeat infinite"></i>
+                                                                </p>
+                                                                {{/if}}
+                                                                {{/if}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{/if}}
+                                            </div>
+                                            <div class="col-12 mt-5 hidden-xl hidden-lg hidden-md hidden-sm">
+                                                <div class="WOH_Game_Pane">
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            {{#if loadNone}}
+                                                            <h4 class="font-30 menu-list text-success dismiss">
+                                                                <i class="fas fa-mouse-pointer pr-0"></i>
+                                                            </h4>
+                                                            {{else}}
+                                                            <h4 class="font-30 menu-list text-success" id="select2">
+                                                                <i class="fas fa-mouse-pointer pr-0"></i>
+                                                            </h4>
+                                                            {{/if}}
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h4 class="font-30 menu-list" id="stats">
+                                                                {{#if showStatistics}}
+                                                                <i class="fas fa-chart-bar text-success"></i>
+                                                                {{else}}
+                                                                <i class="fas fa-chart-bar text-info"></i>
+                                                                {{/if}}
+                                                            </h4>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            {{#if loadNone}}
+                                                            <h4 class="font-30 menu-list dismiss">
+                                                                <i class="fas fa-times text-danger"></i>
+                                                            </h4>
+                                                            {{else}}
+                                                            <h4 class="font-30 menu-list" id="cancel">
+                                                                <i class="fas fa-times text-danger"></i>
+                                                            </h4>
+                                                            {{/if}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-2 text-center">
+                                        <div class="WOH_Game_Pane">
+                                            <div class="row">
+                                                {{#if loadNone}}
+                                                <div class="col-3">
+                                                    <h4 class="font-30 menu-list text-danger dismiss">
+                                                        <i class="fas fa-minus"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="col-3">
+                                                    <h4 class="font-30 menu-list text-success dismiss">
+                                                        <i class="fas fa-plus"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="col-3">
+                                                    <h4 class="font-30 menu-list text-info dismiss">
+                                                        <i class="fas fa-arrows-alt"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="col-3">
+                                                    <h4 class="font-30 menu-list dismiss">
+                                                        <i class="fas fa-step-forward text-danger"></i>
+                                                    </h4>
+                                                </div>
+                                                {{else}}
+                                                <div class="col-3">
+                                                    <h4 class="font-30 menu-list text-danger" id="minus">
+                                                        <i class="fas fa-minus"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="col-3">
+                                                    <h4 class="font-30 menu-list text-success" id="plus">
+                                                        <i class="fas fa-plus"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="col-3">
+                                                    <h4 class="font-30 menu-list text-info" id="maximum">
+                                                        <i class="fas fa-arrows-alt"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="col-3">
+                                                    <h4 class="font-30 menu-list" id="next">
+                                                        <i class="fas fa-step-forward text-danger"></i>
+                                                    </h4>
+                                                </div>
+                                                {{/if}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="text-dark text-center mr-3 pt-2">
+                                            {{#if yesError}}
+                                            <button class="btn btn-danger w-100 btn-lg z-depth-3">
+                                                <b> Error Found <i class="fas fa-times"></i> </b>
+                                            </button>
+                                            {{else}}
+                                            {{#if successMessageWon}}
+                                            <button class="btn btn-success w-100 btn-lg z-depth-3">
+                                                <b> Win <i class="fas fa-check"></i> </b>
+                                            </button>
+                                            {{else}}
+                                            {{#if successMessageFail}}
+                                            <button class="btn btn-danger w-100 btn-lg z-depth-3">
+                                                <b> Lost <i class="fas fa-times"></i> </b>
+                                            </button>
+                                            {{else}}
+                                            {{#if loadNone}}
+                                            <button id="emptyMode" class="btn btn-dark w-100 btn-lg z-depth-3">
+                                                <b> Loading... </b>
+                                            </button>
+                                            {{else}}
+                                            <button id="play" class="btn btn-dark w-100 btn-lg z-depth-3">
+                                                <b>{{loadPlayBtnLabel}}</b>
+                                            </button>
+                                            {{/if}}
+                                            {{/if}}
+                                            {{/if}}
+                                            {{/if}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                {{#if currentUser}}
+                                <h5 class="text-right">
+                                    <small class="pull-left">Balance</small>
+                                    <span class="text-success">
+                                        {{loadBalance}}
+                                        <small> BTC</small>
+                                    </span>
+                                </h5>
+                                <p class="text-right text-dark">
+                                    <span class="pull-left">Username</span>
+                                    <span class="text-dark">{{Username}}</span>
+                                </p>
+                                <p class="text-right text-dark">
+                                    <span class="pull-left">Challenge</span>
+                                    {{#if challengeStatus}}
+                                    <span class="text-success">
+                                        <i class="fas fa-check ml-1"></i>
+                                        <i class="fas fa-check ml-1"></i>
+                                        <i class="fas fa-check ml-1"></i>
+                                    </span>
+                                    {{else}}
+                                    <span class="text-danger">
+                                        <i class="fas fa-times ml-1"></i>
+                                        <i class="fas fa-times ml-1"></i>
+                                        <i class="fas fa-times ml-1"></i>
+                                    </span>
+                                    {{/if}}
+                                </p>
+                                {{else}}
+                                <h5 class="text-right">
+                                    <small class="pull-left">
+                                        Balance
+                                    </small>
+                                    <span class="text-success"> 0.000000 <small> BTC</small></span>
+                                </h5>
+                                <p class="text-right text-dark">
+                                    <span class="pull-left">Challenge</span>
+                                    <span class="text-danger">
+                                        <i class="fas fa-times ml-1"></i>
+                                        <i class="fas fa-times ml-1"></i>
+                                        <i class="fas fa-times ml-1"></i>
+                                    </span>
+                                </p>
+                                <p class="text-right text-dark animated shake" id="signInLink">
+                                    <span class="pull-left"><b>Not Yet Sign In?</b></span>
+                                    <a href="/login" class="myGames-link">Sign In</a>
+                                </p>
+                                {{/if}}
+                                <hr>
+                                {{#if showStatistics}}
+                                {{loadStats}}
+                                <div>
+                                    <h5 class="text-dark"> Today's Stats</h5>
+                                    <h6 class="text-right text-dark">
+                                        <span class="text-danger pr-4">
+                                            <b><i class="fas fa-times"></i></b>
+                                        </span>
+                                        <span class="text-success pl-3"><b><i class="fas fa-check"></i></b></span>
+                                    </h6>
+                                    <hr>
+                                    <h6 class="text-right text-dark">
+                                        <span class="pull-left"><b>B-P-G</b></span>
+                                        <span class="text-danger mr-1 mr-sm-3"><b>{{loadBPGLost}}%</b> </span>
+                                        <span class="text-success"><b>{{loadBPG}}%</b> </span>
+                                    </h6>
+                                    <h6 class="text-right text-dark">
+                                        <span class="pull-left"><b>B-G-P</b></span>
+                                        <span class="text-danger mr-1 mr-sm-3"><b>{{loadBGPLost}}% </b> </span>
+                                        <span class="text-success"><b>{{loadBGP}}% </b> </span>
+                                    </h6>
+                                    <hr>
+                                    <h6 class="text-right text-dark">
+                                        <span class="pull-left"><b>P-B-G</b></span>
+                                        <span class="text-danger mr-1 mr-sm-3"><b>{{loadPBGLost}}% </b> </span>
+                                        <span class="text-success"><b>{{loadPBG}}% </b> </span>
+                                    </h6>
+                                    <h6 class="text-right text-dark">
+                                        <span class="pull-left"><b>P-G-B</b></span>
+                                        <span class="text-danger mr-1 mr-sm-3"><b>{{loadPGBLost}}% </b>
+                                        </span>
+                                        <span class="text-success"><b>{{loadPGB}}% </b> </span>
+                                    </h6>
+                                    <hr>
+                                    <h6 class="text-right text-dark">
+                                        <span class="pull-left"><b>G-B-P</b></span>
+                                        <span class="text-danger mr-1 mr-sm-3"><b>{{loadGBPLost}}% </b> </span>
+                                        <span class="text-success"><b>{{loadGBP}}% </b> </span>
+                                    </h6>
+                                    <h6 class="text-right text-dark">
+                                        <span class="pull-left"><b>G-P-B</b></span>
+                                        <span class="text-danger mr-1 mr-sm-3"><b>{{loadGPBLost}}% </b> </span>
+                                        <span class="text-success"><b>{{loadGPB}}% </b> </span>
+                                    </h6>
+                                </div>
+                                {{else}}
+                                {{#if noBalance}}
+                                <h1 class="text-center text-dark animated rubberBand infinite">
+                                    <i class="fas fa-times-circle fa-4x text-danger"></i>
+                                </h1>
+                                <h5 class="text-danger text-center">
+                                    <b>Insufficient Balance</b>
+                                </h5>
+                                {{else}}
+                                {{#if yesError}}
+                                <h1 class="text-center text-dark animated rubberBand infinite">
+                                    <i class="fas fa-times-circle fa-4x text-danger"></i>
+                                </h1>
+                                <h5 class="text-danger text-center">
+                                    <b>Something Went Wrong!</b>
+                                </h5>
+                                {{else}}
+                                {{#if successMessageWon}}
+                                <h1 class="text-center text-dark animated rubberBand infinite">
+                                    <i class="fas fa-check-circle fa-4x text-success"></i>
+                                </h1>
+                                <h4 class="text-success text-center pt-2">
+                                    <b>WON</b>
+                                </h4>
+                                {{else}}
+                                {{#if successMessageFail}}
+                                <h1 class="text-center text-dark animated rubberBand infinite">
+                                    <i class="fas fa-times-circle fa-4x text-danger"></i>
+                                </h1>
+                                <h4 class="text-danger text-center pt-2">
+                                    <b>LOST</b>
+                                </h4>
+                                {{else}}
+
+                                {{#if quickhelp}}
+                                <div id="quick-help">
+                                    <p class="text-dark">
+                                        <b> QUICK HELP
+                                            <span class="pull-right">
+                                                <a href="/help" class="myGames-link"> Get Full Help </a>
+                                            </span>
+                                        </b>
+                                        <br>
+                                        <br> One player created this game and selected ( 1 ) on
+                                        <span class="text-info"><b>{{quickHelpMode}}</b></span>.
+                                        What was his <b> 2nd Choice ? 3rd choice ? </b>
+                                    </p>
+                                    <hr>
+                                    <p class="text-dark text-left">
+                                        <b>
+                                            Choice 1:
+                                            <span class="pull-right"> {{quickHelpMode}}
+                                                {{#if checkGame}}
+                                                <i class="fas fa-check text-success"></i>
+                                                {{/if}}
+                                            </span>
+                                        </b>
+                                    </p>
+                                    <p class="text-dark text-left">
+                                        <b>
+                                            Choice 2:
+                                            <span class="pull-right"> {{nextChoice}} </span>
+                                        </b>
+                                    </p>
+                                    <p class="text-dark text-left">
+                                        <b>
+                                            Choice 3:
+                                            <span class="pull-right"> {{lastChoice}} </span>
+                                        </b>
+                                    </p>
+                                    <button class="btn btn-danger btn-md w-100 mt-3" id="close-quick-help">
+                                        <b>Close Quick help</b>
+                                    </button>
+                                </div>
+                                {{else}}
+                                <!-- Check if the user has logged in -->
+                                {{#if currentUser}}
+                                {{#if showDeposit}}
+                                <p class="text-right mt-0">
+                                    <a href="/deposit">
+                                        <span class="text-info underline">make a deposit</span>
+                                    </a>
+                                </p>
+                                {{/if}}
+                                <p class="text-right text-dark">
+                                    <b>
+                                        <span class="pull-left">Max Games</span>
+                                        <span class="text-info">{{userMaxGames}}</span>
+                                    </b>
+                                </p>
+                                {{else}}
+                                <p class="text-right text-dark">
+                                    <b> <span class="pull-left">
+                                            Max Games
+                                        </span>
+                                        <span class="text-info"> 0 </span>
+                                    </b>
+                                </p>
+                                {{/if}}
+                                <div>
+                                    <p class="text-right text-dark">
+                                        <b>
+                                            <span class="pull-left">Game Cost</span>
+                                            <span class="text-info">{{loadPrice}} BTC</span>
+                                        </b>
+                                    </p>
+                                    <p class="text-right text-primary">
+                                        <b>
+                                            <span class="pull-left">Total Games</span>
+                                            <span class="text-primary">{{loadCurrentGames}}</span>
+                                        </b>
+                                    </p>
+                                    <p class="text-right text-success">
+                                        <b>
+                                            <span class="pull-left">TOTAL WIN</span>
+                                            <span class="text-success"> + {{totalWin}} BTC</span>
+                                        </b>
+                                    </p>
+                                    <hr>
+                                    <p class="text-right text-dark">
+                                        <span class="pull-left"><b>Bonus</b></span>
+                                        {{#if currentUser}}
+                                        <span class="text-dark">
+                                            <b>{{loadCoupon}}</b>
+                                        </span>
+                                        {{else}}
+                                        <span class="text-dark"><b>0</b></span>
+                                        {{/if}}
+                                    </p>
+                                    <hr>
+                                    <h6 class="text-right text-dark">
+                                        <b> <span class="pull-left">TOTAL</span>
+                                            <span class="text-dark">{{loadTotalCost}} BTC</span>
+                                        </b>
+                                    </h6>
+                                </div>
+                                {{/if}}
+                                {{/if}}
+                                {{/if}}
+                                {{/if}}
+                                {{/if}}
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="new">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">
+                {{> sidebar}}
+                <div class="card">
+                    <div class="card-body woh-font">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="text-dark"> <i class="fas fa-plus-square text-warning"></i> </h4>
+                                    </div>
+                                    <div class="col-12 text-center mb-3">
+                                        <div class="WOH_Game_Pane">
+                                            <div id="blue-side" class="blue-side z-depth-3">
+                                                <div class="wohBlue-scene">
+                                                    <div class="wohBlue">
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle wohBlue-border"></div>
+                                                        <div class="wohBlue-circle"></div>
+                                                        <div class="wohBlue-circle"></div>
+                                                        <div class="wohBlue-circle"></div>
+                                                        <div class="wohBlue-circle"></div>
+                                                        <div class="wohBlue-circle"></div>
+                                                    </div>
+                                                    <div class="num-blue">
+                                                        {{#if validBlueSession}}
+                                                        <p class="animated pulse infinite text-dark">
+                                                            {{blueSide blueSession}}
+                                                        </p>
+                                                        {{else}}
+                                                        <p class="text-dark">
+                                                            <i class="fas fa-question animated heartBeat infinite"></i>
+                                                        </p>
+                                                        {{/if}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="purple-side" class="purple-side z-depth-3">
+                                                <div class="wohPurple-scene">
+                                                    <div class="wohPurple">
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle wohPurple-border"></div>
+                                                        <div class="wohPurple-circle"></div>
+                                                        <div class="wohPurple-circle"></div>
+                                                        <div class="wohPurple-circle"></div>
+                                                        <div class="wohPurple-circle"></div>
+                                                        <div class="wohPurple-circle"></div>
+                                                    </div>
+                                                    <div class="num-purple">
+                                                        {{#if validPurpleSession}}
+                                                        <p class="animated pulse infinite text-dark pl-2">
+                                                            {{purpleSide purpleSession}}
+                                                        </p>
+                                                        {{else}}
+                                                        <p class="text-dark pt-1">
+                                                            <i class="fas fa-question animated heartBeat infinite"></i>
+                                                        </p>
+                                                        {{/if}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="green-side" class="green-side text-center z-depth-3">
+                                                <div class="wohGreen-scene">
+                                                    <div class="wohGreen">
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle wohGreen-border"></div>
+                                                        <div class="wohGreen-circle"></div>
+                                                        <div class="wohGreen-circle"></div>
+                                                        <div class="wohGreen-circle"></div>
+                                                        <div class="wohGreen-circle"></div>
+                                                        <div class="wohGreen-circle"></div>
+                                                    </div>
+                                                    <div class="num-green text-dark">
+                                                        {{#if validGreenSession}}
+                                                        <p class="animated pulse infinite text-dark">
+                                                            {{greenSide greenSession}}
+                                                        </p>
+                                                        {{else}}
+                                                        <p class="text-dark pt-1">
+                                                            <i class="fas fa-question animated heartBeat infinite"></i>
+                                                        </p>
+                                                        {{/if}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="text-center">
+                                            <form id="loadGame">
+                                                <div class="row mb-0 mt-4">
+                                                    <div class="col-4 text-center">
+                                                        <div class="from-check form-check-inline">
+                                                            {{#if uniqueBlue}}
+                                                            <input type="checkbox" class="form-check-input" id="b"
+                                                                checked>
+                                                            {{else}}
+                                                            {{#if validSession}}
+                                                            <input type="checkbox" class="form-check-input" id="b"
+                                                                checked>
+                                                            {{else}}
+                                                            <input type="checkbox" class="form-check-input" id="b">
+                                                            {{/if}}
+                                                            {{/if}}
+                                                            <label class="form-check-label" for="b">
+                                                                <span>B</span>
+                                                            </label>
+                                                            <br><span class="text-danger hide" id="bError"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4 text-center">
+                                                        <div class="from-check form-check-inline">
+                                                            {{#if uniquePurple}}
+                                                            <input type="checkbox" class="form-check-input" id="p"
+                                                                checked>
+                                                            {{else}}
+                                                            {{#if validSession}}
+                                                            <input type="checkbox" class="form-check-input" id="p"
+                                                                checked>
+                                                            {{else}}
+                                                            <input type="checkbox" class="form-check-input" id="p">
+                                                            {{/if}}
+                                                            {{/if}}
+                                                            <label class="form-check-label" for="p"> <span>P</span>
+                                                            </label>
+                                                            <br>
+                                                            <span class="text-danger hide" id="pError"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4 text-center pb-2">
+                                                        <div class="from-check form-check-inline">
+                                                            {{#if uniqueGreen}}
+                                                            <input type="checkbox" class="form-check-input" id="g"
+                                                                checked>
+                                                            {{else}}
+                                                            {{#if validSession}}
+                                                            <input type="checkbox" class="form-check-input" id="g"
+                                                                checked>
+                                                            {{else}}
+                                                            <input type="checkbox" class="form-check-input" id="g">
+                                                            {{/if}}
+                                                            {{/if}}
+                                                            <label class="form-check-label" for="g">
+                                                                <span>G</span>
+                                                            </label>
+                                                            <br><span class="text-danger hide" id="gError"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 mb-2 text-center">
+                                                        <div class="WOH_Game_Pane">
+                                                            <div class="row">
+                                                                <div class="col-3">
+                                                                    <h4 class="font-30 menu-list" id="divideGame">
+                                                                        <i class="fas fa-divide text-primary"
+                                                                            id="divideLabel"></i>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="col-3">
+                                                                    <h4 class="font-30 menu-list" id="minusGame">
+                                                                        <i class="fas fa-minus text-danger"
+                                                                            id="minusLabel"></i>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="col-3">
+                                                                    <h4 class="font-30 menu-list" id="addGame">
+                                                                        <i class="fas fa-plus text-info"
+                                                                            id="addLabel"></i>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="col-3">
+                                                                    <h4 class="font-30 menu-list" id="timesGame">
+                                                                        <i class="fas fa-times text-success"
+                                                                            id="timesLabel"></i>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-dark text-center pt-2 pr-2 pl-sm-0 pr-sm-0 pb-2">
+                                                    {{#if currentUser}}
+                                                    {{#if enoughBalance}}
+                                                    <button type="button" class="btn btn-danger w-100 btn-lg z-depth-3">
+                                                        <b> Error <i class="fas fa-times"></i> </b>
+                                                    </button>
+                                                    {{else}}
+                                                    {{#if successSession}}
+                                                    <button type="button"
+                                                        class="btn btn-success w-100 btn-lg z-depth-3">
+                                                        <b> Success <i class="fas fa-check"></i> </b>
+                                                    </button>
+                                                    {{else}}
+                                                    <button type="submit" class="btn btn-dark w-100 btn-lg z-depth-3"
+                                                        id="addNew">
+                                                        <b>{{loadProperBtnLabel}}</b>
+                                                    </button>
+                                                    {{/if}}
+                                                    {{/if}}
+                                                    {{else}}
+                                                    <button type="submit" class="btn btn-dark w-100 btn-lg z-depth-3"
+                                                        id="addNew">
+                                                        <b>Sign In To Play</b>
+                                                    </button>
+                                                    {{/if}}
+                                                </p>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                {{#if currentUser}}
+                                <h5 class="text-right">
+                                    <small class="pull-left"> Balance </small>
+                                    <span class="text-success"> {{loadBalance}} <small> BTC</small>
+                                    </span>
+                                </h5>
+                                <p class="text-right text-dark">
+                                    <span class="pull-left"> Max Games </span>
+                                    <span class="text-dark">{{userMaxGames}}</span>
+                                </p>
+                                <p class="text-right text-dark">
+                                    <span class="pull-left"> Challenge </span>
+                                    {{#if challengeStatus}}
+                                    <span class="text-success">
+                                        <i class="fas fa-check ml-1"></i>
+                                        <i class="fas fa-check ml-1"></i>
+                                        <i class="fas fa-check ml-1"></i>
+                                    </span>
+                                    {{else}}
+                                    <span class="text-danger">
+                                        <i class="fas fa-times ml-1"></i>
+                                        <i class="fas fa-times ml-1"></i>
+                                        <i class="fas fa-times ml-1"></i>
+                                    </span>
+                                    {{/if}}
+                                </p>
+                                {{else}}
+                                <h5 class="text-right">
+                                    <small class="pull-left"> Balance </small>
+                                    <span class="text-success"> 0.000000 <small> BTC</small></span>
+                                </h5>
+                                <p class="text-right text-dark">
+                                    <span class="pull-left"> Challenge </span>
+                                    <span class="text-danger">
+                                        <i class="fas fa-times ml-1"></i>
+                                        <i class="fas fa-times ml-1"></i>
+                                        <i class="fas fa-times ml-1"></i>
+                                    </span>
+                                </p>
+                                <p class="text-right text-dark animated shake" id="signInLink">
+                                    <span class="pull-left"><b>Not Yet Sign In?</b></span>
+                                    <a href="/login" class="myGames-link"> Sign In </a>
+                                </p>
+                                {{/if}}
+                                <hr>
+                                {{#if noResponse}}
+                                <p class="text-right text-dark">
+                                    <span class="pull-left">
+                                        <b>Side 1</b>
+                                    </span>
+                                    <span class="text-dark">
+                                        <b id="one">
+                                            {{#if getOne}}
+                                            {{userOne}}
+                                            {{else}}
+                                            <b>?</b>
+                                            {{/if}}
+                                        </b>
+                                    </span>
+                                </p>
+                                <p class="text-right text-dark">
+                                    <span class="pull-left">
+                                        <b>Side 2</b>
+                                    </span>
+                                    <span class="text-dark">
+                                        <b id="two">
+                                            {{#if getTwo}}
+                                            {{userTwo}}
+                                            {{else}}
+                                            <b>?</b>
+                                            {{/if}}
+                                        </b>
+                                    </span>
+                                </p>
+                                <p class="text-right text-dark">
+                                    <span class="pull-left">
+                                        <b>Side 3</b>
+                                    </span>
+                                    <span class="text-dark">
+                                        <b id="three">
+                                            {{#if getThree}}
+                                            {{userThree}}
+                                            {{else}}
+                                            <b>?</b>
+                                            {{/if}}
+                                        </b>
+                                    </span>
+                                </p>
+                                <hr>
+                                <p class="text-right text-dark">
+                                    <b> <span class="pull-left"> Game Cost </span>
+                                        <span class="text-dark">{{loadPrice}} BTC</span>
+                                    </b>
+                                </p>
+                                <p class="text-right text-primary">
+                                    <b> <span class="pull-left"> Total Games </span>
+                                        <span> {{sessionGames}} </span>
+                                    </b>
+                                </p>
+                                <p class="text-right text-success">
+                                    <b> <span class="pull-left"> TOTAL WIN </span> + {{totalWin sessionGames}} BTC </b>
+                                </p>
+                                <hr>
+                                <p class="text-right text-dark">
+                                    <span class="pull-left">
+                                        <b>Bonus</b>
+                                    </span>
+                                    <span class="text-dark"><b>{{loadCoupon}}</b></span>
+                                </p>
+                                <hr>
+                                <h6 class="text-right text-dark">
+                                    <b>
+                                        <span class="pull-left">TOTAL</span>
+                                        <span class="text-dark"> {{totalCost sessionGames}} BTC</span>
+                                    </b>
+                                </h6>
+                                {{else}}
+                                {{#if enoughBalance}}
+                                <h1 class="text-center">
+                                    <i class="fas fa-times-circle fa-4x text-danger animated rubberBand infinite"></i>
+                                </h1>
+                                <h5 class="text-center text-danger">
+                                    <b>Insufficient Balance</b>
+                                </h5>
+                                {{/if}}
+                                {{#if successSession}}
+                                <h1 class="text-center">
+                                    <i class="fas fa-check-circle fa-4x text-success animated rubberBand infinite"></i>
+                                </h1>
+                                <h4 class="text-center text-success">
+                                    <b> Success </b>
+                                </h4>
+                                {{/if}}
+                                {{#if failSession}}
+                                <h1 class="text-center">
+                                    <i class="fas fa-times-circle fa-4x text-danger animated rubberBand infinite"></i>
+                                </h1>
+                                <h4 class="text-center text-danger">
+                                    <b> Something went wrong! </b>
+                                </h4>
+                                {{/if}}
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="account">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<div class="card minimum">
+                    <div class="card-body woh-font">
+                        <div class="row">{{#if currentUser}}<div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-2"> <span class="hidden-xxs"><b>No.</b></span> </div>
+                                            <div class="col-5 text-center"><b>DETAILS</b></div>
+                                            <div class="col-5"><b>OPTION</b></div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">{{#if networkError}}<div class="col-12 pt-2">
+                                                <h4 class="text-center text-danger">Something went wrong!</h4>
+                                            </div>{{/if}}{{#if sessionNoGames}}<div class="col-12 pt-2">
+                                                <h1 class="text-center">No Available Game</h1>
+                                                <h6 class="text-center"> <a href="/new"> <span
+                                                            class="text-info myGames-link"> Start a new game </span>
+                                                    </a> </h6>
+                                            </div>{{else}}{{displayGames}}<div class="col-12">
+                                                <h5 class="text-left"> <a href="" id="list-refresh"> <i
+                                                            class="fas fa-sync"></i> <span
+                                                            class="text-info"><small><small>Refresh
+                                                                    List</small></small></span> </a> </h5>
+                                                <div class="row" id="shower"></div>
+                                            </div>{{/if}}</div>
+                                        <hr class="hidden-xl hidden-lg hidden-md">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="text-right"> <small class="pull-left"><small>Balance</small></small> <span
+                                        class="text-success">{{loadBalance}} BTC</span> </h5>
+                                <hr>{{#if sessionNoGames}}<h1 class="text-center"> <i
+                                        class="fas fa-times fa-2x text-info"></i> </h1>
+                                <h6 class="text-center text-dark"> <b>Your Account is Empty</b> </h6>
+                                {{else}}{{loadFirst}}<p class="text-right text-dark"> <span
+                                        class="pull-left"><b>Option</b></span> <span class="text-dark">
+                                        <b>{{#if priviledge}}<i
+                                                class="fas fa-crown text-success"></i>{{/if}}{{loadMode}}</b></span>
+                                </p>
+                                <p class="text-right text-success"> <b> <span class="pull-left">Games Won</span> <span
+                                            class="text-success">{{GamesWon}}</span> </b> </p>
+                                <p class="text-right text-danger"> <b> <span class="pull-left">Games Lost</span> <span
+                                            class="text-danger">{{GamesLost}}</span> </b> </p>
+                                <hr>{{#if challengeStatus}}<p class="text-right text-dark"> <span
+                                        class="pull-left"><b>In Challenge</b></span> <span class="text-dark"> <i
+                                            class="fas fa-check text-success"></i> <i
+                                            class="fas fa-check text-success"></i> <i
+                                            class="fas fa-check text-success"></i> </span> </p>
+                                <p class="text-right text-dark"> <span class="pull-left"><b>Challenge Team</b></span>
+                                    <span class="text-info"> <b>{{getTeam}}</b> </span> </p>{{else}}<p
+                                    class="text-right text-dark"> <span class="pull-left"><b>In Challenge</b></span>
+                                    <span class="text-dark"> <i class="fas fa-times text-danger"></i> <i
+                                            class="fas fa-times text-danger"></i> <i
+                                            class="fas fa-times text-danger"></i> </span> </p>
+                                <p class="text-right text-dark"> <span class="pull-left"><b>Challenge Team</b></span>
+                                    <span class="text-dark"> <i class="fas fa-times text-danger"></i> <i
+                                            class="fas fa-times text-danger"></i> <i
+                                            class="fas fa-times text-danger"></i> </span> </p>{{/if}}
+                                <hr>{{#if cashOut}}{{cashOutAmount}}{{#if cashOutAllow}}<p class="text-right text-dark">
+                                    <span class="pull-left text-success"><b>CASH-OUT</b></span> <span
+                                        class="text-success"> <b>{{printCashOut}} BTC</b> </span> </p>{{else}}<p
+                                    class="text-right text-dark"> <span
+                                        class="pull-left text-success"><b>CASH-OUT</b></span> <span
+                                        class="text-danger line-middle"> <b>{{printCashOut}} BTC</b> </span> </p>
+                                {{/if}}{{/if}}<p class="text-right text-dark pb-3"> <span class="pull-left"><b>Created
+                                            on</b></span> <span class="text-dark"> <b>{{GetDate}}</b> </span> </p>
+                                {{#if cashOut}}{{#if cashOutAllow}}<h5 class="text-center text-dark"> <button
+                                        id="{{getGameID}}" onclick="closeGame('{{getGameID}}')"
+                                        class="btn btn-danger w-100 ml-0 mr-0"><b>Close Game</b></button> </h5>{{else}}
+                                <h5 class="text-center text-dark disabled"> <button
+                                        class="btn btn-danger w-100 ml-0 mr-0 disabled dismiss"> <b>Close Game</b>
+                                    </button> </h5>{{/if}}{{/if}}{{/if}}
+                            </div>{{else}}<div class="col-12">
+                                <h1 class="text-center"><b> My Account </b></h1>
+                                <hr class="pb-4 pt-1">
+                            </div>
+                            <hr class="pb-3">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <h1 class="text-center"> <i class="fas fa-users-cog text-info fa-5x"></i> </h1>
+                                <h5 class="text-center pt-4 pb-4"> <b> Please! <a href="/login"> <span
+                                                class="myGames-link">Sign In</span> </a> First </b> </h5>
+                            </div>{{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="challenge">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<div class="card minimum">
+                    <div class="card-body woh-font">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-3 col-sm-6">
+                                                <!-- <h4 class="text-dark"> <i class="fas fa-trophy pt-1 text-warning"></i> </h4> -->
+                                            </div>
+                                            <div class="col-12 col-md-6 text-right">
+                                                <div class="md-form form-inline mt-0"> <input type="text"
+                                                        class="form-control w-100 animated infinite"
+                                                        placeholder="Search By Name" name="search_challenge"
+                                                        id="search_challenge"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-2"> <span class="hidden-xxs">No.</span> </div>
+                                            <div class="col-5 text-center">Name <span class="hidden-xxs">of
+                                                    Challenge</span></div>
+                                            <div class="col-5 text-center"><i class="fas fa-cog"></i></div>
+                                        </div>
+                                        <hr>{{#if challengeStatus}}{{#if currentUser}}<div class="row pb-2">
+                                            <div class="col-2 pt-2"> <i
+                                                    class="fas fa-circle animated pulse infinite text-warning"></i>
+                                            </div>
+                                            <div class="col-5 pt-2 text-center"><b>{{getName}}</b> <span
+                                                    class="hidden-xxs hidden-xs"> <i
+                                                        class="fas fa-check text-success animated pulse infinite"></i>
+                                                </span> </div>
+                                            <div class="col-5 text-center"> <button id="current_challenge"
+                                                    class="btn btn-success btn-sm ml-0">Details</button> </div>
+                                        </div>{{/if}}{{else}}<div class="row pb-2">
+                                            <div class="col-2 pt-2"> <i
+                                                    class="fas fa-arrow-right animated pulse infinite text-info"></i>
+                                            </div>
+                                            <div class="col-5 pt-2 text-center"><b>Start Challenge</b> <i
+                                                    class="fas fa-check text-success animated pulse infinite hidden-xxs"></i>
+                                            </div>
+                                            <div class="col-5 text-center"> <button id="start_challenge_pane"
+                                                    class="btn btn-secondary btn-sm ml-0">Start</button> </div>
+                                        </div>{{/if}}<div class="challenges_list">
+                                            <div class="row pb-3" id="showChallenges"></div>
+                                        </div>
+                                        <hr class="hidden-xl hidden-lg hidden-md">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">{{#if currentUser}}<div>
+                                    <h5 class="text-right"> <small class="pull-left">Balance</small> <span
+                                            class="text-success">{{loadBalance}}<small> BTC</small></span> </h5>
+                                    <!-- <h5 class="text-right"> <small class="pull-left">Balance</small> <span class="text-success">{{loadBalance}} BTC</span> </h5> -->
+                                    <p class="text-right text-dark"> <span
+                                            class="pull-left">Challenge</span>{{#if challengeStatus}}<span
+                                            class="text-success"> <i class="fas fa-check ml-1"></i> <i
+                                                class="fas fa-check ml-1"></i> <i class="fas fa-check ml-1"></i>
+                                        </span>{{else}}<span class="text-danger"> <i class="fas fa-times ml-1"></i> <i
+                                                class="fas fa-times ml-1"></i> <i class="fas fa-times ml-1"></i>
+                                        </span>{{/if}}</p>
+                                    <p class="text-right text-dark"> <span class="pull-left">Challenge Balance</span>
+                                        <span class="text-primary">{{loadChallengeBalance}} BTC</span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left">Challenge Share</span>
+                                        <span class="text-dark badge badge-info p-2"> <b>{{Points}} pts
+                                                <small>( {{getUserShare}}% )</small></b> </span> </p>
+                                </div>{{else}}<div>
+                                    <h5 class="text-right"> <small class="pull-left">Balance</small> <span
+                                            class="text-success">0.000000 BTC</span> </h5>
+                                    <p class="text-right text-dark"> <span class="pull-left">Challenge</span> <span
+                                            class="text-danger"> <i class="fas fa-times ml-1"></i> <i
+                                                class="fas fa-times ml-1"></i> <i class="fas fa-times ml-1"></i> </span>
+                                    </p>
+                                    <p class="text-right text-dark"> <span class="pull-left">Challenge Balance</span>
+                                        <span class="text-primary">0.000000 BTC</span> </p>
+                                    <p class="text-right text-dark animated shake" id="signInLink"> <span
+                                            class="pull-left"><b>Not Yet Sign In?</b></span> <a href="/login"
+                                            class="myGames-link">Sign In</a> </p>
+                                </div>{{/if}}{{#if challengeStatus}}{{else}}{{#if startNew}}<div>
+                                    <p class="text-left text-dark pt-3"> <span> <b><small>START NEW
+                                                    CHALLENGE</small></b> </span> </p>
+                                    <hr>{{#if enterName}}<p class="text-muted m-1">You have selected <b
+                                            class="text-success">TEAM {{getCurrentTeam}} </b> <br><b>Notice:</b> <small>
+                                            The name should contain only <b class="text-dark"> alphanumeric characters
+                                            </b> and a <b class="text-dark"> hyphen ( - ) </b> ( Min: <b id="name-min">
+                                                6 </b> -> Max: <b id="name-max"> 20 </b> ) </small> </p>
+                                    <form id="start_challenge">{{#if balanceError}}<div
+                                            class="md-form form-inline mb-2 text-center"> <b> <span class="text-danger">
+                                                    <i class="fas fa-exclamation-triangle"></i> Insufficient Balance
+                                                    <br></span> First, <a href="/deposit" class="myGames-link"> Make a
+                                                    deposit</a> before starting a challenge </b> </div>
+                                        <p class="text-center"> <a href="#" id="backTeam">
+                                                <span class="pull-right underline change-color"> Change Team </span>
+                                            </a>
+                                            <br><button type="button"
+                                                class="btn btn-dark w-100 btn-md ml-0 mr-0 z-depth-3 dismiss">
+                                                Insufficient Balance </button> </p>{{else}}<div
+                                            class="md-form form-inline mb-2"> <input type="text"
+                                                class="form-control w-100 animated"
+                                                placeholder="Name of Challenge ( e.g. war-of-half ) " name="chal_name"
+                                                id="chal_name"> </div>
+                                        <p class="text-center"> <a href="#" id="backTeam"> <span
+                                                    class="pull-right underline change-color"> change team </span> </a>
+                                            <br><button id="starting" type="submit"
+                                                class="btn btn-primary w-100 btn-md ml-0 mr-0 z-depth-3"> Start now
+                                            </button> </p>{{/if}}
+                                    </form>{{else}}<p class="text-muted m-1">Choose <b class="text-dark">TEAM ALPHA</b>
+                                    </p>
+                                    <p class="text-center"> <button id="start_alpha"
+                                            class="btn btn-primary w-100 btn-md ml-0 mr-0 z-depth-2"> Team Alpha
+                                        </button> </p>
+                                    <hr>
+                                    <p class="text-muted m-1">Choose <b class="text-dark">TEAM BETA</b></p>
+                                    <p class="text-center"> <button id="start_beta"
+                                            class="btn btn-primary w-100 btn-md ml-0 mr-0 z-depth-2"> Team Beta
+                                        </button> </p>{{/if}}
+                                </div>{{/if}}{{/if}}{{#if showDetailsPane}}
+                                <!--{{getTimeStart}}{{getTimeNow}}-->
+                                <p class="text-center"> <b>
+                                        <script>
+                                            // let b = 0;
+                                            b = () => {
+                                                let txt = document.getElementById('timer');
+                                                let oldTime = '{{getTimeStart}}'; let current_time = '{{getTimeNow}}'; let valtime = setInterval(() => {
+                                                    //{{getTimeStart}}
+                                                    //{{getTimeNow}}
+                                                    let hours = 0, minutes = 0, seconds = 0;
+                                                    let days = 0; let time = (current_time - oldTime); if (time < 86400000) {
+                                                        let milliseconds = parseInt((time % 1000) / 100); seconds = Math.floor((time / 1000) % 60); minutes = Math.floor((time / (1000 * 60)) % 60); hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+                                                        days = Math.floor((time / (1000 * 60 * 60 * 24)) % 30); hours = (hours < 10) ? "0" + hours : hours; minutes = (minutes < 10) ? "0" + minutes : minutes; seconds = (seconds < 10) ? "0" + seconds : seconds;
+                                                        days = (days < 10) ? "0" + days : days; txt.innerHTML = hours + ' <span class="text-dark"> H : </span>' + minutes + '<span class="text-dark"> Min : </span>' + seconds + '<span class="text-dark"> Sec </span>'; current_time = parseInt(current_time) + 1000;
+                                                    } else {
+                                                        txt.innerHTML = ' 23 <span class="text-dark"> H : </span>' + ' 59 <span class="text-dark"> Min : </span>' + ' 59 <span class="text-dark"> Sec </span>';
+                                                        // stop the counting timer
+                                                        clearInterval(valtime);
+                                                    }
+                                                }, 1000);
+                                            }
+                                            b(); 
+                                        </script>
+                                        <span class="text-danger" id="timer"> 00 <span class="text-dark"> H : </span> 00
+                                            <span class="text-dark"> Min : </span> 00 <span class="text-dark"> Sec
+                                            </span> </span> </b> </p>{{#if balanceError}}<p
+                                    class="text-center text-dark"> <b> <span class="text-danger"> <i
+                                                class="fas fa-exclamation-triangle"></i> Insufficient Balance<br></span>
+                                        First, <a href="/deposit" class="myGames-link"> Make a deposit</a> </b> </p>
+                                {{else}}<h6 class="text-right text-dark"> <span class="pull-left"><b>Total
+                                            Players</b></span> <span class="text-dark"><b>{{getTotalPlayers}}</b></span>
+                                </h6>{{/if}}
+                                <hr>
+                                <p class="text-left text-dark"> <span class="text-dark"> <b> Join Team Alpha </b>
+                                    </span> </p>
+                                <p class="text-center">{{#if challengeStatus}}<button
+                                        class="btn btn-danger btn-md w-100 ml-0 mr-0 dismiss disabled z-depth-2">
+                                        <b>Alpha Unavailable</b> </button>{{else}}<button id="enterAlpha"
+                                        class="btn btn-info btn-md w-100 ml-0 mr-0">Join Alpha</button>{{/if}}</p>
+                                <p class="text-left text-dark"> <span class="text-dark"> <b> Join Team Beta </b> </span>
+                                </p>
+                                <p class="text-center">{{#if challengeStatus}}<button
+                                        class="btn btn-danger btn-md w-100 ml-0 mr-0 dismiss disabled z-depth-2">
+                                        <b>Beta Unavailable</b> </button>{{else}}<button id="enterBeta"
+                                        class="btn btn-info btn-md w-100 ml-0 mr-0"> Join Beta </button>{{/if}}</p>
+                                {{/if}}{{#if currentUser}}{{#if showChallenge}}
+                                <hr>
+                                <p class="text-right text-dark"> <span class="pull-left">Your Team</span> <span
+                                        class="text-info"><span><b>{{getTeam}}</b></span></span> </p>
+                                <p class="text-right text-dark"> <span class="pull-left">Team Players</span> <span
+                                        class="text-info"><b>{{getTeamLength}}</b></span> </p>
+                                <p class="text-right text-dark"> <span class="pull-left">Total Games</span> <span
+                                        class="text-dark"> <b>{{getUserChallengeGames}}/{{getTotalChallengeGames}}</b>
+                                    </span> </p>
+                                <p class="text-right text-dark"> <span class="pull-left">Cancel Request</span> <span
+                                        class="text-danger"> <b>{{cancelRequest}}% </b> </span> </p>
+                                <hr>
+                                <h6 class="text-center pt-3 pb-3"> <b>
+                                        <script>
+                                            // let b = 0;
+                                            b = () => {
+                                                let txt = document.getElementById('time');
+                                                let oldTime = '{{getTimeStart}}';
+                                                let current_time = '{{getTimeNow}}';
+                                                // console.log('Old time is: ' + oldTime); 
+                                                // console.log('New time is: ' + current_time);
+                                                let challengeTimer = setInterval(() => {
+                                                    let hours = 0, minutes = 0, seconds = 0;
+                                                    let days = 0; let time = (current_time - oldTime); if (time < 86400000) {
+                                                        let milliseconds = parseInt((time % 1000) / 100); seconds = Math.floor((time / 1000) % 60); minutes = Math.floor((time / (1000 * 60)) % 60); hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+                                                        days = Math.floor((time / (1000 * 60 * 60 * 24)) % 30); hours = (hours < 10) ? "0" + hours : hours; minutes = (minutes < 10) ? "0" + minutes : minutes; seconds = (seconds < 10) ? "0" + seconds : seconds;
+                                                        days = (days < 10) ? "0" + days : days; txt.innerHTML = hours + ' <span class="text-dark"> H : </span>' + minutes + '<span class="text-dark"> Min : </span>' + seconds + '<span class="text-dark"> Sec </span>'; current_time = parseInt(current_time) + 1000;
+                                                    } else {
+                                                        txt.innerHTML = ' 23 <span class="text-dark"> H : </span>' + ' 59 <span class="text-dark"> Min : </span>' + ' 59 <span class="text-dark"> Sec </span>';
+                                                        // clear the interval for time counting 
+                                                        clearInterval(challengeTimer);
+                                                    }
+                                                    // console.log('adding time again and again');
+                                                }, 1000);
+                                            }
+                                            b();
+                                        </script>
+                                        <span class="text-danger" id="time"> 00 <span class="text-dark"> H : </span> 00
+                                            <span class="text-dark"> Min : </span> 00 <span class="text-dark"> Sec
+                                            </span> </span> </b> </h6>
+                                <h5 class="text-center text-dark">{{#if userCancel}}<button id="keep_challenge"
+                                        class="btn btn-danger w-100 ml-0 z-depth-2"> <b>Keep Challenge</b>
+                                    </button>{{else}}<button id="close_challenge"
+                                        class="btn btn-danger w-100 ml-0 z-depth-2"> <b>Close Challenge</b>
+                                    </button>{{/if}}</h5>{{/if}}{{/if}}
+                                <!-- <h5 class="text-center text-dark"> <button class="btn btn-info w-100 ml-0">Join Alpha</button> </h5> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="history">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<div class="card minimum">
+                    <div class="card-body woh-font">
+                        <div class="row">{{#if currentUser}}<div class="col-md-8 pt-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-check text-center"> <input type="radio" id="games"
+                                                        class="form-check-input" name="menu" checked> <label
+                                                        class="form-check-label" for="games"><b>Games</b></label> <input
+                                                        type="radio" id="transaction" class="form-check-input"
+                                                        name="menu"> <label class="form-check-label"
+                                                        for="transaction"><b>Transaction</b></label> </div>
+                                            </div>
+                                        </form>
+                                        <hr class="mt-2">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-2"> <span class="hidden-xxs"><b>No.</b></span> </div>
+                                            <div class="col-5 text-center"><b>DETAILS</b></div>
+                                            <div class="col-5 text-center"><b>OPTION</b></div>
+                                        </div>
+                                        <hr>{{#if empty}}<div class="row">
+                                            <div class="col-2 pt-1"> <i class="fas fa-arrow-right text-info"></i> </div>
+                                            <div class="col-5 text-center pt-1"><b>Last Challenge</b></div>
+                                            <div class="col-5 text-center"> <button id="noInfo"
+                                                    class="btn btn-secondary btn-sm m-0"> Details </button> </div>
+                                        </div>
+                                        <hr>
+                                        <h5 class="text-center text-info"> You have no record yet </h5>
+                                        {{else}}{{#if showGames}}<div class="row">
+                                            <div class="col-2 pt-1"> <i class="fas fa-arrow-right text-info"></i> </div>
+                                            <div class="col-5 text-center pt-1"><b>last challenge</b></div>
+                                            <div class="col-5 text-center"> <button id="latest_Challenge"
+                                                    class="btn btn-secondary btn-sm m-0"> Details </button> </div>
+                                        </div>
+                                        <hr>
+                                        <div class="challenges_list pb-3">
+                                            <div class="row" id="showHistory"></div>
+                                        </div>
+                                        <hr class="hidden-xl hidden-lg hidden-md">{{/if}}{{#if showTransactions}}<div
+                                            class="challenges_list pb-3">{{#if loadEmpty}}<div class="row">
+                                                <div class="col-12">
+                                                    <h5 class="text-center text-info"> You have no record yet </h5>
+                                                </div>
+                                            </div>{{else}}<div class="row" id="showTransaction"></div>{{/if}}</div>
+                                        <hr class="hidden-xl hidden-lg hidden-md">{{/if}}{{/if}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 pt-2">
+                                <br class="hidden-xl hidden-lg hidden-md hidden-sm">
+                                <h5 class="text-left text-dark"> <i class="fas fa-chart-pie pr-2 text-muted"></i> FULL
+                                    DETAILS </h5>
+                                <hr>{{#if lastChallenge}}{{#if showLastChallenge}}<div>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Name of
+                                                Challenge</b></span> <span
+                                            class="text-primary"><b>{{chalName}}</b></span> </p>
+                                    <hr>
+                                    <p class="text-center text-dark"> <span> <b>TEAM ALPHA{{#if isAlpha}}<i
+                                                    class="fas fa-check text-success ml-1"></i>{{else}}<i
+                                                    class="fas fa-times text-danger ml-1"></i>{{/if}}</b> </span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Total Games</b></span>
+                                        <span class="text-info"><b>{{chalAlphaGames}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Total Points</b></span>
+                                        <span class="text-info"><b>{{chalAlphaPoints}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Games won</b></span>
+                                        <span class="text-info"><b>{{chalAlphaWon}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Total Players</b></span>
+                                        <span class="text-info"><b>{{chalAlphaPlayers}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Sharing
+                                                Balance</b></span> <span
+                                            class="text-success"><b>{{alphaChallengeBalance}} BTC</b></span> </p>
+                                    <hr>
+                                    <p class="text-center text-dark"> <span> <b>TEAM BETA{{#if isBeta}}<i
+                                                    class="fas fa-check text-success ml-1"></i>{{else}}<i
+                                                    class="fas fa-times text-danger ml-1"></i>{{/if}}</b> </span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Total Games</b></span>
+                                        <span class="text-info"><b>{{chalBetaGames}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Total Points</b></span>
+                                        <span class="text-info"><b>{{chalBetaPoints}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Games won</b></span>
+                                        <span class="text-info"><b>{{chalBetaWon}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Total Players</b></span>
+                                        <span class="text-info"><b>{{chalBetaPlayers}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Sharing
+                                                Balance</b></span> <span
+                                            class="text-success"><b>{{betaChallengeBalance}} BTC</b></span> </p>
+                                    <hr>
+                                    <p class="text-center text-dark"> <span><b>RESULTS &amp; DETAILS </b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>My Team</b></span> <span
+                                            class="text-info"><b>{{chalPlayerTeam}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Team Winnings</b></span>
+                                        <span class="text-success"><b>{{chalAmount}}</b> BTC </span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>My Share</b></span>
+                                        <span class="text-info"><b>{{chalLastShare}}</b> %</span> </p>
+                                    <p class="text-right text-success"> <span class="pull-left"><b>My Win</b></span>
+                                        <span><b>{{chalLastWin}}</b> BTC </span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Created On</b></span>
+                                        <span class="text-dark"><b>{{chalDate}}</b></span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Cancel
+                                                Request</b></span> <span
+                                            class="text-danger"><b>{{chalCancelRequest}}%</b></span> </p>
+                                    <hr>
+                                    <p class="text-right text-info"> <span class="pull-left"><b>FINAL
+                                                RESULT</b></span>{{#if chalDraw}}<span
+                                            class="text-muted"><b>DRAW</b></span>{{/if}}{{#if chalWinner}}<span
+                                            class="text-success"><b>WON</b></span>{{/if}}{{#if chalLooser}}<span
+                                            class="text-danger"><b>LOST</b></span>{{/if}}</p>
+                                </div>{{else}}<h1 class="text-center mt-3"> <i class="fas fa-times fa-5x text-info"></i>
+                                </h1>
+                                <h6 class="text-center text-dark"><b>No Challenge History yet</b></h6>
+                                {{/if}}{{else}}{{#if empty}}<h1 class="text-center mt-3"> <i
+                                        class="fas fa-times fa-5x text-info"></i> </h1>
+                                <h6 class="text-center text-dark"><b>No Transaction History yet</b></h6>
+                                {{else}}{{#if showGames}}<div>
+                                    <p class="text-center text-dark"> <span> <b>GAME DETAILS{{#if HistoryStatus}}<i
+                                                    class="fas fa-check text-success ml-1"></i>{{else}}<i
+                                                    class="fas fa-times text-danger ml-1"></i>{{/if}}</b> </span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Game Mode</b></span>
+                                        <span style="text-transform: uppercase"> <b>{{#if Gamepriviledge}}<i
+                                                    class="fas fa-crown text-success"></i>{{/if}}{{historyMode}}</b>
+                                        </span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Total games</b></span>
+                                        <span class="text-dark"><b>{{historyTotal}}</b></span> </p>
+                                    <p class="text-right text-info"> <span class="pull-left"><b>Total played</b></span>
+                                        <span class="text-info"> <b>{{HistoryCompleted}}</b> </span> </p>
+                                    <p class="text-right text-success"> <span class="pull-left"><b>Total won</b></span>
+                                        <span class="text-success"> <b>{{HistoryWon}}</b> </span> </p>
+                                    <p class="text-right text-danger"> <span class="pull-left"><b>Total lost</b></span>
+                                        <span class="text-danger"> <b>{{HistoryLost}}</b> </span> </p>
+                                    <hr>
+                                    <p class="text-right text-dark"> <span
+                                            class="pull-left"><b>Challenge</b></span>{{#if HistoryChallenge}}<span
+                                            class="text-dark"> <i class="fas fa-check text-success"></i> <i
+                                                class="fas fa-check text-success"></i> <i
+                                                class="fas fa-check text-success"></i> </span>{{else}}<span
+                                            class="text-dark"> <i class="fas fa-times text-danger"></i> <i
+                                                class="fas fa-times text-danger"></i> <i
+                                                class="fas fa-times text-danger"></i> </span>{{/if}}</p>
+                                    <p class="text-right text-dark"> <span class="pull-left"> <b>Created On</b> </span>
+                                        <span class="text-dark"> <b>{{HistoryDate}}</b> </span> </p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Final
+                                                Status</b></span>{{#if HistoryStatus}}<span class="text-success"> <b>
+                                                Completed </b> </span>{{else}}<span class="text-danger"> <b> Canceled
+                                            </b> </span>{{/if}}</p>
+                                </div>{{/if}}{{#if showTransactions}}{{#if loadEmpty}}<h1 class="text-center mt-3"> <i
+                                        class="fas fa-times fa-5x text-info"></i> </h1>
+                                <h6 class="text-center text-dark"><b>No Transaction History yet</b></h6>{{else}}<div>
+                                    <p class="text-right text-dark"> <span
+                                            class="pull-left"><b>Amount</b></span>{{#if TransNone}}<span
+                                            class="text-muted"><b> +/-{{TransAmount}}
+                                                BTC</b></span>{{else}}{{#if TransDeposit}}<span class="text-muted"><b>
+                                                +{{TransAmount}} BTC</b></span>{{/if}}{{#if TransWithdraw}}<span
+                                            class="text-muted"><b> -{{TransAmount}} BTC</b></span>{{/if}}{{/if}}</p>
+                                    <p class="text-right text-dark"> <span class="pull-left"><b>Date</b></span> <span
+                                            class="text-dark"> <b>{{TransDate}}</b> </span> </p>
+                                    <p class="text-right text-dark"> <span
+                                            class="pull-left"><b>Operation</b></span>{{#if TransNone}}<span
+                                            class="text-muted"> <b> XxXxXxX </b>
+                                        </span>{{else}}{{#if TransPending}}<span class="text-muted"> <b> Pending... </b>
+                                        </span>{{/if}}{{#if TransDeposit}}<span class="text-muted"> <b> Deposit </b>
+                                        </span>{{/if}}{{#if TransWithdraw}}<span class="text-muted"> <b> Withdraw </b>
+                                        </span>{{/if}}{{/if}}</p>
+                                    <p class="text-right text-dark"> <span
+                                            class="pull-left"><b>Status</b></span>{{#if pendingStatus}}<span
+                                            class="text-warning"> <b> Pending <i
+                                                    class="fas fa-circle animated pulse infinite"></i>
+                                                <!-- <i class="fas fa-circle"></i> <i class="fas fa-circle"></i> -->
+                                                <!-- <i class="fas fa-check"></i> <i class="fas fa-check"></i> --> </b>
+                                        </span>{{/if}}{{#if completedStatus}}<span class="text-success"> <b> <i
+                                                    class="fas fa-check"></i>
+                                                <!-- <i class="fas fa-check"></i> <i class="fas fa-check"></i> --> </b>
+                                        </span>{{/if}}{{#if cancelStatus}}<span class="text-danger"> <b> <i
+                                                    class="fas fa-times"></i> </b> </span>{{/if}}{{#if noneStatus}}<span
+                                            class="text-info"> <b>Loading...</b> </span>{{/if}}</p>
+                                    <hr>
+                                    <p class="text-left text-dark"> <span class=""><b>BTC Address</b></span> <br><a
+                                            href="#"> <span class="text-muted myGames-link"> <b>{{TransBTCAddress}}</b>
+                                            </span> </a> </p>
+                                </div>{{/if}}{{/if}}{{/if}}{{/if}}
+                            </div>{{else}}<div class="col-12">
+                                <h1 class="text-center"><b>History</b></h1>
+                                <hr class="pb-4 pt-1">
+                            </div>
+                            <hr class="pb-3">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <h1 class="text-center"> <i class="fas fa-users-cog text-info fa-5x"></i> </h1>
+                                <h5 class="text-center pt-4 pb-4"> <b> Please! <a href="/login"> <span
+                                                class="myGames-link">Sign In</span> </a> First </b> </h5>
+                            </div>{{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="help">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<div class="card">
+                    <div class="card-body woh-font">
+                        <h2 class="text-center pb-4 text-info"> GAME HELP </h2>
+                        <h6 class="text-dark text-uppercase"> <i class="fas fa-home text-dark mr-2"></i><b> How to
+                                play</b> </h6>
+                        <hr>
+                        <p class="text-muted text-justify"> The Game consists of three (3) sides ( <b>Blue, Purple and
+                                Green</b> ) with <b>labels</b>. It starts with a pre-selected side picked by the owner
+                            of
+                            the game. <br><b class="text-dark"> Your work as player is to select the two remaining sides
+                                in the <span class="text-info underline"> same order</span> as the owner of the
+                                game. </b>
+                            <br><br><b> Start <a href="/" class="myGames-link"> playing </a> now. </b> </p>
+                        <h6 class="text-dark pt-4 text-uppercase"><i class="fas fa-plus text-dark mr-2"></i><b>Start new
+                                game</b></h6>
+                        <hr>
+                        <p class="text-muted text-justify"> <b class="text-dark"> To start a new game, first select (
+                                tick ) the <span class="text-info"> first side </span>, then the <span
+                                    class="text-info"> second side </span> and lastly the <span class="text-info"> third
+                                    side </span> will be selected automatically. </b> <br>By starting a new game, you
+                            become the owner of the game, that means you can cancel the game at anytime if only you did
+                            not place it while you are in challenge mode or if you did not use a bonus to start the
+                            game. <br><br>All the possible choices you can start are: <ul
+                                class="text-muted text-justify">
+                                <li><b class="text-dark">BPG</b> Blue-Purple-Green</li>
+                                <li><b class="text-dark">BGP</b> Blue-Green-Purple</li>
+                                <li><b class="text-dark">PBG</b> Purple-Blue-Green</li>
+                                <li><b class="text-dark">PGB</b> Purple-Green-Blue</li>
+                                <li><b class="text-dark">GBP</b> Green-Blue-Purple</li>
+                                <li><b class="text-dark">GPB</b> Green-Purple-Blue</li>
+                            </ul> <b>Notice1:</b> <b class="text-muted"> You can start a game in a non-challenge mode
+                                and at the moment you join a challenge, all the remaining winnings will be saved for
+                                your challenge. </b> <br><b>Notice2:</b> <b class="text-dark"> A new Game with a total
+                                of 20 and above is divided into multiple sub games to players giving you more chances of
+                                winning. </b> ( <b class="text-success"> Recommended <i class="fas fa-crown"></i> </b> )
+                            <br><br><b> Start <a href="/new" class="myGames-link">a game</a> now. </b> </p>
+                        <h6 class="text-dark pt-4 text-uppercase"> <i
+                                class="fas fa-trophy text-dark mr-2"></i><b>Challenge Mode</b> </h6>
+                        <hr>
+                        <p class="text-muted text-justify"> <b class="text-dark"> A challenge is divided into two teams
+                                (<span class="text-info">Team Alpha &amp; Team Beta</span>) where each player can choose
+                                a team </b> <br>Both teams should have the same number of players, that means, once a
+                            player has joined Team Alpha, the next player should only get access to team Beta or wait
+                            until the access is back to Team Alpha <br><br><b class="text-dark"> By choosing a team
+                                (alpha or beta) and providing the name of the challenge, every user of the system can
+                                create a new challenge </b> <br><br><b> In challenge mode, all winnings are kept into
+                                your challenge balance and your challenge share is calculated based on games you played,
+                                placed and bouses you received </b> <br><br><b class="text-dark">Challenge Points
+                                Calculation per game:</b>
+                            <ul class="text-muted text-justify">
+                                <li> <i>Start a game:</i> <b> + 0.5 Point </b> </li>
+                                <li> <i>Game won (Player or Owner):</i> <b> + 2 Points </b> </li>
+                                <li> <i>Get Bonus (Player or Owner):</i> <b> + 2 Points </b> </li>
+                            </ul> <b class="text-primary"> A Challenge maximum duration is 24 hours ( 1 Day ) </b>
+                            <br><b class="text-dark"> A Challenge closes when <span class="text-info"> 10 % of players
+                                </span> (Alpha or Beta) request the close ( example: 10 of 100 Players ) </b>
+                            <br><br><b> <span class="text-success">The team winner</span> is the one with the sum of
+                                players points greater than the other </b> <br><b class="text-dark"> Players in team
+                                winner are credited with their <span class="text-success"> own challenge balances plus
+                                    the half ( 50% )</span> of challenge balances of players of the opposite team.
+                                <br>The winning is distributed to players based on their <span class="text-info">
+                                    challenge share or Points contributed </span> </b> <br><br><b class="text-dark">
+                                Players in the opposite team ( loosing team ) are credited with half of their challenge
+                                balances </b> <br><br><b class="text-dark"> In case of a draw ( Points alpha = Points
+                                beta ), Players in both teams are credited with their respective challenge balances </b>
+                            <br><br><b class="text-dark"> Notice: You can only be in one challenge at a time and leave
+                                when it is closed or ended </b> <br><br><b> Join <a href="/challenge"
+                                    class="myGames-link"> challenge</a> now. </b>
+                        </p>
+                        <h6 class="text-dark pt-4 text-uppercase"> <i class="fas fa-ambulance text-dark mr-2"></i><b>
+                                Bonus &amp; Rewards </b> </h6>
+                        <hr>
+                        <p class="text-muted text-justify pb-3"> <b class="text-dark"> A bonus is a reduction price to
+                                the total cost that you should pay to place a new game or play on an existing one. Its
+                                value is 20% of the minimum cost price. </b> <br><br><span class="text-dark"> <b> You
+                                    can gain more bonuses via your referral code. When a new player registers an account
+                                    with your code, a small portion of his bonus is rewarded to you. <br><br>Start <a
+                                        href="/share" class="myGames-link"> sharing </a> now. </b> </span> <br>
+                            <hr> <span class="text-dark"> <b> The Bonus is calulated from 4-7 Games, 8-11 Games, 12-15
+                                    Games and 16-19 Games. The more you play multiple games instantly, the more you
+                                    increase your chances to get more bonuses. </b> </span> <br><br><b
+                                class="text-dark">Notice: In Challenge, A bonus increases your share points. <br>The
+                                more bonuses you get, the more points you have and the lower your total cost is. </b>
+                            <br><br><b> Start <a href="/" class="myGames-link"> playing </a> now. </b> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="settings">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<section class="form-elegant">
+                    <div class="card minimum">
+                        <div class="card-body woh-font">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-center">
+                                        <h1 class="mb-3"><b>Settings</b></h1>{{#if showUpdated}}<h6
+                                            class="text-success text-center"> <b><i class="fas fa-check"></i>
+                                                <i>Password changed Successfully</i> </b> </h6>
+                                        <h6 class="text-dark text-center"> <b> <i> <a href="/login"
+                                                        class="myGames-link"> Sign in </a> with your new Password </i>
+                                            </b> </h6>{{else}}<h6 class="text-left text-success"> <b
+                                                class="text-dark">1. Change Password</b> </h6>{{/if}}
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-4"></div>{{#if currentUser}}<div class="col-md-6 col-lg-4">
+                                    <form id="change">
+                                        <div class="md-form"> <input type="password" id="oldPassword"
+                                                class="form-control w-100 animated infinite" name="oldPassword"
+                                                placeholder="Old Password"> <span class="text-danger hide"
+                                                id="errorOldPassword"></span> </div>
+                                        <div class="md-form"> <input type="password" id="newPassword"
+                                                class="form-control w-100 animated infinite" name="newPassword"
+                                                placeholder="New Password"> <span class="text-danger hide"
+                                                id="errorNewPassword"></span> </div>
+                                        <div class="md-form"> <input type="password" id="confirmNewPassword"
+                                                class="form-control w-100 animated infinite" name="confirmNewPassword"
+                                                placeholder="Confirm New Password"> <span class="text-danger hide"
+                                                id="errorConfirmNewPassword"></span> </div>
+                                        <div class="text-center pt-2"> <button type="submit"
+                                                class="btn blue-gradient w-100 btn-rounded ml-0"> Change Password
+                                            </button> </div>
+                                    </form>
+                                </div>{{else}}<div class="col-md-6 col-lg-4">
+                                    <h1 class="text-center"> <i class="fas fa-users-cog text-info fa-5x"></i> </h1>
+                                    <h5 class="text-center pt-4 pb-4"> <b> Please! <a href="/login"> <span
+                                                    class="myGames-link">Sign In</span> </a> First </b> </h5>
+                                </div>{{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="deposit">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 pt-3 animated pulse">
+                {{> sidebar}}
+                <div class="card minimum">
+                    <div class="card-body woh-font">
+                        <div class="row">
+                            {{#if currentUser}}
+                            <div class="col-12">
+                                <h1 class="text-center"><b>Deposit</b></h1>
+                                <hr class="pb-3">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row text-center">
+                                    {{#if checkService}}
+                                    <div class="col-12">
+                                        <p class="text-center pt-4">
+                                            <b> <i>Deposit is not supported currently</i> </b>
+                                        </p>
+                                        <p class="pt-3 text-center">
+                                            <b>
+                                                <a id="checkNetwork" href="">
+                                                    <span class="myGames-link">
+                                                        <i>Retry Connecting...</i>
+                                                    </span>
+                                                </a>
+                                            </b>
+                                        </p>
+                                    </div>
+                                    {{else}}
+                                    <div class="col-12">
+                                        <span class="pt-2 pb-2">
+                                            <b> BITCOIN ADDRESS </b>
+                                        </span>
+                                        <hr>
+                                        <p class="pt-2 text-center">
+                                            <span class="text-dark">
+                                                <i class="fas fa-check text-success"></i>
+                                                <b class="text-dark">
+                                                    Your account balance will be updated once your transaction
+                                                    has been successfully completed.
+                                                    <br>
+                                                    <span class="text-danger">
+                                                        Use only the address below
+                                                    </span>
+                                                </b>
+                                            </span>
+                                        </p>
+                                        {{#if showTick}}
+                                        <div class="md-form mb-1 mt-0">
+                                            <input type="text" class="form-control w-100 text-center deposit-input"
+                                                id="copyAddressValue" value="{{loadAddress}}" readonly
+                                                style="border-bottom-color: #00c851; border-bottom-width: 1.5px;">
+                                        </div>
+                                        <button class="btn btn-success btn-md z-depth-2">
+                                            <b>Bitcoin Address Copied</b>
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                        {{else}}
+                                        <div class="md-form mb-1 mt-0">
+                                            <input type="text" class="form-control w-100 text-center deposit-input"
+                                                id="copyAddressValue" value="{{loadAddress}}" readonly
+                                                style="border-bottom-color: #33b5e5; border-bottom-width: 1.5px;">
+                                        </div>
+                                        <button id="copyAddress" class="btn btn-info btn-md z-depth-2">
+                                            <b>Copy Bitcoin Address</b>
+                                        </button>
+                                        {{/if}}
+                                    </div>
+                                    {{/if}}
+                                    <div class="col-12">
+                                        <p class="pt-2 text-center">
+                                            <span class="text-dark">
+                                                <i class="fas fa-check text-success"></i>
+                                                <b class="hidden-xxs">
+                                                    Send bitcoins to add funds to your account
+                                                </b>
+                                                <b class="hidden-xs hidden-sm hidden-md hidden-lg hidden-xl">
+                                                    Send bitcoins to fund your account
+                                                </b>
+                                                <br>
+                                                <i class="fas fa-check text-success"></i>
+                                                <b> Send funds only once to this address </b>
+                                                <br><i class="fas fa-check text-success"></i>
+                                                <b> Send only bitcoins to this address </b> <br>
+                                                <i class="fas fa-check text-success"></i>
+                                                <b> No minimum deposit </b>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- <p class="text-dark text-center pt-0">
+                                    <script>// let xDeposit=new Date().getFullYear(); document.getElementById('year').innerHTML=new Date().getFullYear();; </script>
+                                    <b> ntavigwa &copy; <span id="year"></span> all rights reserved </b> </p> -->
+                            </div>
+
+                            <div class="col-md-4">
+                                <br class="hidden-xl hidden-lg hidden-md">
+                                <span class="text-dark">
+                                    <b>Where to Buy Bitcoins Instantly?</b>
+                                </span>
+                                <hr>
+                                <span class="text-dark">
+                                    <i class="fas fa-lock text-success"></i> <b> Fast and Trusted websites </b>
+                                    <hr>
+                                </span>
+                                <p class="text-dark m-0">
+                                    <b> 1. </b> <a href="https://localbitcoins.com/buy_bitcoins" class="myGames-link"
+                                        target="_blank">
+                                        LocalBitcoins
+                                    </a>
+                                </p>
+                                <p class="text-dark m-0">
+                                    <b> 2. </b> <a href="https://paxful.com/buy-bitcoin" class="myGames-link"
+                                        target="_blank">
+                                        Paxful
+                                    </a>
+                                </p>
+                                <p class="text-dark m-0">
+                                    <b> 3. </b> <a href="https://www.coinbase.com" class="myGames-link" target="_blank">
+                                        Coinbase
+                                    </a>
+                                </p>
+                                <p class="text-dark m-0">
+                                    <b> 4. </b> <a href="https://cex.io/buysell" class="myGames-link" target="_blank">
+                                        Cex.io
+                                    </a>
+                                </p>
+                                <p class="text-dark m-0">
+                                    <b> 5. </b> <a href="https://www.binance.com/en/buy-sell-crypto"
+                                        class="myGames-link" target="_blank">
+                                        Binance
+                                    </a>
+                                </p>
+                                <p class="text-dark m-0">
+                                    <b> 6. </b> <a href="https://www.coinmama.com/bitcoin" class="myGames-link"
+                                        target="_blank">
+                                        CoinMama
+                                    </a>
+                                </p>
+                                <p class="text-dark m-0">
+                                    <b> 7. </b> <a href="https://www.bitstamp.net" class="myGames-link" target="_blank">
+                                        Bitstamp
+                                    </a>
+                                </p>
+                                <p class="text-dark m-0">
+                                    <b> 8. </b> <a href="https://www.kraken.com" class="myGames-link" target="_blank">
+                                        Kraken
+                                    </a>
+                                </p>
+                                <p class="text-dark m-0">
+                                    <b> 9. </b> <a href="https://gemini.com" class="myGames-link" target="_blank">
+                                        Gemini Exchange
+                                    </a>
+                                </p>
+                                <p class="text-dark m-0">
+                                    <b> 10. </b> <a href="https://xcoins.io" class="myGames-link" target="_blank">
+                                        XCoins
+                                    </a>
+                                </p>
+                            </div>
+                            {{else}}
+                            <div class="col-12">
+                                <h1 class="text-center"><b> Deposit </b></h1>
+                                <hr class="pb-4 pt-1">
+                            </div>
+                            <hr class="pb-3">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <h1 class="text-center"> <i class="fas fa-users-cog text-info fa-5x"></i> </h1>
+                                <h5 class="text-center pt-4 pb-4"> <b> Please! <a href="/login"> <span
+                                                class="myGames-link">Sign In</span> </a> First </b> </h5>
+                            </div>{{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="withdraw">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<div class="card minimum">
+                    <div class="card-body woh-font">
+                        <div class="row">{{#if currentUser}}<div class="col-12">
+                                <h1 class="text-center"><b>Withdraw</b></h1>
+                                <hr class="pb-3">
+                            </div>
+                            <div class="col-lg-2 col-xl-3"></div>
+                            <div class="col-lg-8 col-xl-6">
+                                <div class="row">
+                                    <div class="col-12 pb-3 pb-sm-0">
+                                        <h5 class="text-dark text-left text-sm-right"> Your Balance <br><small
+                                                class="text-success">{{balance}} BTC</small> </h5>
+                                    </div>
+                                </div>{{#if showWithdrawCode}}{{else}}<h5 class="text-center text-dark pt-1"> <b>PROVIDE
+                                        DETAILS</b> </h5>{{/if}}<form id="withdraw">
+                                    <div class="row">{{#if checkService}}<div class="col-12">
+                                            <p class="text-center pt-2"> <b> <i>Withdraw is not supported currently</i>
+                                                </b> </p>
+                                            <p class="pt-2 pb-2 text-center"> <b> <a id="checkWithdraw" href=""> <span
+                                                            class="myGames-link"> <i>Retry Connecting...</i> </span>
+                                                    </a> </b> </p>
+                                        </div>{{else}}{{#if showWithdrawCode}}<div class="col-12 col-sm-8">
+                                            <div class="md-form mt-2 mb-2"> <input type="text"
+                                                    class="form-control w-100 animated infinite text-center"
+                                                    value="{{addressWithdraw}}" readonly
+                                                    style="border-bottom-color: #33b5e5; border-bottom-width: 1.5px">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="md-form mt-0 mt-sm-2"> <input type="text"
+                                                    class="form-control w-100 animated infinite text-center"
+                                                    value="{{amountWithdraw}}" readonly
+                                                    style="border-bottom-color: #33b5e5; border-bottom-width: 1.5px">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="text-dark text-center m-0 pt-0"> <b> Please! Type in your Password
+                                                </b> </p>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="md-form mt-3 mb-1 text-center"> <input type="password"
+                                                    class="form-control w-100 animated infinite text-center"
+                                                    id="password" name="password" placeholder="Your Password"> <span
+                                                    id="errorPassword" class="text-danger text-center"></span> </div>
+                                            {{#if loadProcessing}}<p class="text-dark text-right m-0 pb-2 line-through">
+                                                <b><a href="" class="text-danger"> <i class="fas fa-times"></i> Abort
+                                                        transaction </a> </b> </p>{{else}}<p
+                                                class="text-dark text-right m-0 pb-2"> <b><a href=""
+                                                        class="change-color myGames-link" id="cancel_transaction"> <i
+                                                            class="fas fa-times"></i> Abort transaction </a> </b> </p>
+                                            {{/if}}
+                                        </div>{{else}}<div class="col-12 col-sm-8">
+                                            <div class="md-form mt-3 mb-2 mb-sm-0"> <input type="text"
+                                                    class="form-control w-100 animated infinite" id="address"
+                                                    name="address" placeholder="Your Bitcoin Address"> </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                            <div class="md-form mt-0 mt-sm-3 mb-2 mb-sm-0"> <input type="text"
+                                                    class="form-control w-100 animated infinite text-center" id="amount"
+                                                    name="amount" placeholder="Your Bitcoin Amount"> </div>
+                                        </div>
+                                        <div class="col-12 text-center mt-0 pt-0 pb-3"> <span id="errorWithdraw"
+                                                class="text-danger p-0 m-0"></span> </div>
+                                        {{/if}}{{/if}}{{#if showWithdrawCode}}{{else}}<div class="col-12">
+                                            <p class="text-dark text-center"> <i class="fas fa-check text-success"></i>
+                                                <b>Make sure your address is a bitcoin address
+                                                    <br>{{#if showMinimumAlert}}<i class="fas fa-check text-danger"></i>
+                                                    <span class="text-danger">Minimum is{{minimum}} BTC</span>
+                                                    <br>{{else}}<i class="fas fa-check text-success"></i> Minimum to
+                                                    withdraw is {{minimum}} BTC <br>{{/if}}
+                                                    <i class="fas fa-check text-success"></i>
+                                                    <a href="/terms" class="myGames-link">Terms and Conditions</a> apply
+                                                </b> </p>
+                                        </div>{{/if}}{{#if checkService}}{{else}}<div class="col-12 mb-1">
+                                            {{#if errorWithdraw}}<button type="button"
+                                                class="btn btn-danger btn-md w-100 ml-0 z-depth-3"> Process Failed <i
+                                                    class="fas fa-times pl-2"></i>
+                                            </button>{{else}}{{#if successWithdraw}}<button type="button"
+                                                class="btn btn-success btn-md w-100 ml-0 z-depth-3"> Bitcoin sent <i
+                                                    class="fas fa-check pl-2"></i>
+                                            </button>{{else}}{{#if showWithdrawCode}}{{#if loadProcessing}}<button
+                                                class="btn btn-info btn-md w-100 ml-0 z-depth-2 dismiss" type="button">
+                                                <span class="spinner-border spinner-border-sm"></span> Processing...
+                                            </button>{{else}}<button id="sendBitcoin"
+                                                class="btn btn-primary btn-md w-100 ml-0 z-depth-3"> Send Bitcoin
+                                            </button>{{/if}}{{else}}<button type="submit"
+                                                class="btn btn-primary btn-md w-100 ml-0 z-depth-3"> Go Next
+                                            </button>{{/if}}{{/if}}{{/if}}</div>{{/if}}
+                                    </div>
+                                </form>
+                                <!-- <p class="text-dark text-center mt-2">
+                                    <script>// let xWithdraw=new Date().getFullYear(); document.getElementById('year').innerHTML=new Date().getFullYear();; </script>
+                                    <b> ntavigwa &copy; <span id="year"></span> all rights reserved </b> </p> -->
+                            </div>{{else}}<div class="col-12">
+                                <h1 class="text-center"><b> Withdraw </b></h1>
+                                <hr class="pb-4 pt-1">
+                            </div>
+                            <hr class="pb-3">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <h1 class="text-center"> <i class="fas fa-users-cog text-info fa-5x"></i> </h1>
+                                <h5 class="text-center pt-4 pb-4"> <b> Please! <a href="/login"> <span
+                                                class="myGames-link">Sign In</span> </a> First </b> </h5>
+                            </div>{{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<section class="form-elegant">
+                    <div class="card">
+                        <div class="card-body woh-font">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-4"></div>
+                                <div class="col-md-6 col-lg-4">
+                                    <section class="mb-2">
+                                        <h1 class="text-center text-dark my-3"><b>Contact
+                                                Us</b>{{#if showSuccessMessage}}<i
+                                                class="fas fa-check-circle text-success animated pulse infinite"></i>{{/if}}{{#if showFailMessage}}<i
+                                                class="fas fa-times-circle text-danger animated pulse infinite"></i>{{/if}}
+                                        </h1>
+                                        <p class="text-center w-responsive mx-auto mb-1 text-dark"> <b>Do you have any
+                                                questions? <br>Please contact us</b> </p>
+                                        <form id="contact">{{#if currentUser}}<div class="md-form mb-0"> <input
+                                                    type="text" id="email" name="email" class="form-control w-100"
+                                                    value="{{displayEmail}}" readonly> <span id="emailError"
+                                                    class="hide"></span> </div>{{else}}<div class="md-form mb-0"> <input
+                                                    type="text" id="email" name="email"
+                                                    class="form-control w-100 animated infinite"
+                                                    placeholder="Your email"> </div>{{/if}}<div class="md-form mt-1">
+                                                <small class="pull-right"> <b> <span id="counter">0</span> / 300
+                                                        characters</b> </small> <textarea type="text" id="message"
+                                                    name="message" rows="3"
+                                                    class="form-control md-textarea w-100 animated infinite pt-0"
+                                                    placeholder="Your message"></textarea> <small id="underMessage"
+                                                    class="text-dark"> <b>Only allow a-z A-Z 0-9 and , . ' ! ? (10 - 300
+                                                        letters)</b> </small> </div>
+                                            <div class="text-center text-md-left p-0 mt-0"> <button type="submit"
+                                                    class="btn blue-gradient w-100 btn-rounded"> Send Message </button>
+                                            </div>
+                                            <div class="status"></div>
+                                        </form>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="menu">
+    <div class="row">
+        <div class="col-md-12 pt-2 pt-sm-4">
+            <nav class="navbar navbar-expand-lg navbar-light white pt-3 pl-3 pr-3 pb-2">
+                <h1 class="text-center woh-title"> <span id="open-sidebar"> <small>
+                            <small>{{#if currentUser}}{{#if showCloseMenu}}<span class="pull-left text-danger"> <i
+                                        class="fas fa-times pt-2 pointer animated rubberBand"></i> </span>{{else}}<span
+                                    class="pull-left text-info"> <i
+                                        class="fas fa-bars pt-2 pointer animated rubberBand"></i>
+                                </span>{{/if}}{{else}}{{#if showCloseMenu}}<span class="pull-left text-danger"> <i
+                                        class="fas fa-times pt-2 pointer animated rubberBand"></i> </span>{{else}}<span
+                                    class="pull-left text-dark"> <i
+                                        class="fas fa-bars pt-2 pointer animated rubberBand"></i>
+                                </span>{{/if}}{{/if}}</small> </small> </span>
+                    <div class="logo-image text-center text-dark"> <img src="ntavigwa.png" alt="ntavigwa"> </div>
+                    <!-- War{{#if currentUser}}{{#if loadSessionChallenge}}<span class="text-success animated pulse infinite"> of </span>{{else}}<span class="text-info">of</span>{{/if}}{{else}}<span class="text-primary">of</span>{{/if}}half -->
+                </h1>
+                <hr class="mb-1">
+                <div class="row">
+                    <div class="col-3 text-center">
+                        <h2 class="pt-2"> <a href="/"> <i class="fas fa-home text-dark" id="home"></i></a> </h2>
+                    </div>
+                    <div class="col-3 text-center">
+                        <h2 class="pt-2"> <a href="/new"> <i class="fas fa-plus-square text-dark" id="new"></i></a>
+                        </h2>
+                    </div>
+                    <div class="col-3 text-center">
+                        <h2 class="pt-2"> <a href="/challenge"> <i class="fas fa-trophy text-dark" id="chal"></i></a>
+                        </h2>
+                    </div>
+                    <div class="col-3 text-center">
+                        <h2 class="pt-2"> <a href="/help"> <i class="fab fa-hire-a-helper text-dark" id="help"></i> </a>
+                        </h2>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</template>
+<template name="sidebar">
+    <div class="woh-overlay woh-animate-opacity ml-3 mt-3" id="woh-overlay"></div>
+    <div id="sidenav" class="side-nav side-nav-light woh-animate-left ml-3 mt-3" style="display: none">
+        <ul class="custom-scrollbar list-unstyled">
+            <li>
+                <ul class="collapsible collapsible-accordion">
+                    <li> <a class="waves-effect"> <span class="text-muted">Dashboard</span> </a> </li>
+                    {{#if currentUser}}{{else}}<li> <a class="collapsible-header waves-effect" href="/login"> <span
+                                class="text-dark"> <i class="fas fa-sign-in-alt text-primary"></i> Sign In </span> </a>
+                    </li>
+                    <li> <a class="collapsible-header waves-effect" href="/signup"> <span class="text-dark"> <i
+                                    class="fas fa-user-plus text-primary"></i> Sign Up </span> </a> </li>{{/if}}<li><a
+                            class="collapsible-header waves-effect" href="/deposit"> <span class="text-dark"> <i
+                                    class="fas fa-credit-card text-primary"></i> Deposit </span> </a> </li>
+                    <li> <a class="collapsible-header waves-effect text-success" href="/withdraw"> <span
+                                class="text-dark"> <i class="fas fa-credit-card text-primary"></i> Withdraw </span> </a>
+                    </li>
+                    <li><a class="collapsible-header waves-effect" href="/account"> <span class="text-dark"> <i
+                                    class="fas fa-user-circle text-primary"></i> Account </span> </a> </li>
+                    <li><a class="collapsible-header waves-effect" href="/history"> <span class="text-dark"> <i
+                                    class="fas fa-history text-primary"></i> History </span> </a> </li>
+                    <li><a class="collapsible-header waves-effect" href="/share"> <span class="text-dark"> <i
+                                    class="fas fa-share-alt text-success"></i> Share your code </span> </a> </li>
+                    <li><a class="collapsible-header waves-effect" href="/settings"> <span class="text-dark"> <i
+                                    class="fas fa-cog text-primary"></i> Settings </span> </a> </li>
+                    <li><a class="collapsible-header waves-effect" href="/contact"> <span class="text-dark"> <i
+                                    class="fas fa-phone-alt text-primary"></i> Contact Us </span> </a> </li>
+                    <li><a class="collapsible-header waves-effect" href="/terms"> <span class="text-dark"> <i
+                                    class="fas fa-book text-primary"></i> T &amp; Conditions </span> </a> </li>
+                    {{#if currentUser}}<li><a class="collapsible-header waves-effect" id="logout"> <span
+                                class="text-dark"> <i class="fas fa-power-off text-danger"></i>Sign out </span> </a>
+                    </li>{{/if}}
+                </ul>
+            </li>
+        </ul>
+        <div class="sidenav-bg mask-strong"></div>
+    </div>
+</template>
+<template name="notFound">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<section class="form-elegant">
+                    <div class="card minimum">
+                        <div class="card-body woh-font">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <h1 class="text-dark"><b>Page Not Found</b></h1>
+                                    <hr class="mb-5">
+                                </div>
+                                <div class="col-12">
+                                    <p class="text-dark text-left"> <i class="fas fa-bars pr-2"></i> <b>Main Menu</b>
+                                    </p>
+                                    <hr>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-home pr-2"></i> <a href="/"
+                                            class="myGames-link change-color"> <b>Home Page</b> </a> </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-plus-square pr-2"></i> <a href="/new"
+                                            class="myGames-link change-color"><b>Start New Game</b></a> </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-trophy pr-2"></i> <a href="/challenge"
+                                            class="myGames-link change-color"> <b>Start Challenge</b> </a> </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fab fa-hire-a-helper pr-2"></i> <a href="/help"
+                                            class="myGames-link change-color"> <b>Get Help </b> </a> </p>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <p class="text-dark text-left"><i class="fas fa-key pr-2"></i><b>Access Menu</b></p>
+                                    <hr>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-sign-in-alt pr-2"></i> <a href="/login"
+                                            class="myGames-link change-color"><b>Sign In</b></a> </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-user-plus pr-2"></i> <a href="/signup"
+                                            class="myGames-link change-color"><b>Sign Up</b></a> </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-sync pr-2"></i> <a href="/reset"
+                                            class="myGames-link change-color"><b>Reset Password</b></a> </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-phone-alt pr-2"></i> <a href="/contact"
+                                            class="myGames-link change-color"><b>Contact Us</b></a> </p>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <p class="text-dark text-left"><i class="fas fa-user pr-2"></i><b>Personal Menu</b>
+                                    </p>
+                                    <hr>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-credit-card pr-2"></i> <a href="/deposit"
+                                            class="myGames-link change-color"><b>Deposit</b></a> </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-credit-card pr-2"></i> <a href="/withdraw"
+                                            class="myGames-link change-color"><b>Withdraw</b></a> </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-user-cog pr-2"></i> <a href="/account"
+                                            class="myGames-link change-color"><b>My Account</b></a> </p>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <p class="pt-0"> <i class="fas fa-cog pr-2"></i> <a href="/settings"
+                                            class="myGames-link change-color"><b>Settings</b></a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<section class="form-elegant">
+                    <div class="card minimum">
+                        <div class="card-body woh-font">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-4"></div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="text-center">
+                                        <h1 class="mb-5"><b>Sign In</b></h1>
+                                    </div>
+                                    <form id="login">
+                                        <div class="md-form"> <input type="text"
+                                                class="form-control w-100 animated infinite" id="email" name="email"
+                                                placeholder="Your E-mail Address"> <span class="text-danger hide"
+                                                id="errorEmail"></span> </div>
+                                        <div class="md-form"> <input type="password" id="password"
+                                                class="form-control w-100 animated infinite" name="password"
+                                                placeholder="Your Password"> <span class="text-danger hide"
+                                                id="errorPassword"></span> </div>
+                                        <div class="text-center pt-2"> <button type="submit"
+                                                class="btn blue-gradient w-100 btn-rounded ml-0">Sign In</button> </div>
+                                    </form>
+                                    <div class="modal-footer pt-3 mb-1 mx-5">
+                                        <p class="font-small grey-text text-right"> <span> <small>Not a member? <a
+                                                        href="/signup" class="blue-text ml-1"> Sign Up </a> </small>
+                                            </span> <br><span> <small> Forgot Password? <a href="/reset"
+                                                        class="blue-text ml-1"> Reset Password </a> </small> </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="signup">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<section class="form-elegant">
+                    <div class="card minimum">
+                        <div class="card-body woh-font">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-4"></div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="text-center">
+                                        <h1 class="mb-4"><b>Sign Up</b></h1>
+                                    </div>
+                                    <form id="signup">
+                                        <div class="md-form"> <input type="text"
+                                                class="form-control w-100 animated infinite" id="email" name="email"
+                                                placeholder="Your E-mail Address"> <span class="text-danger hide"
+                                                id="errorEmail"></span> </div>
+                                        <div class="md-form pt-0"> <input type="password" id="password"
+                                                class="form-control w-100 animated infinite" name="password"
+                                                placeholder="Your Password"> <span class="text-danger hide"
+                                                id="errorPassword"></span> </div>
+                                        <div class="md-form"> <input type="text" id="referral"
+                                                class="form-control w-100 animated infinite" name="referral"
+                                                placeholder="Referral Code ( not required )"> <span
+                                                class="text-danger hide" id="errorReferral"></span> </div>
+                                        <div class="from-check form-check-inline"> <input type="checkbox"
+                                                class="form-check-input" id="terms" name="terms" checked> <label
+                                                class="form-check-label" for="terms"> <span>I accept <a href="/terms"
+                                                        class="myGames-link">terms and Conditions</a></span> </label>
+                                            <br><span class="text-danger hide" id="errorTerms"></span> </div>
+                                        <div class="text-center pt-2"> <button type="submit"
+                                                class="btn blue-gradient w-100 btn-rounded ml-0"> Sign Up </button>
+                                        </div>
+                                    </form>
+                                    <div class="modal-footer pt-3 mb-1 mx-5">
+                                        <p class="font-small grey-text text-right"> <span><small>Already a member? <a
+                                                        href="/login" class="blue-text ml-1"> Sign In</a></small></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="reset">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<section class="form-elegant">
+                    <div class="card minimum">
+                        <div class="card-body woh-font">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-center">
+                                        <h1><b>Reset Password</b></h1>
+                                        <hr class="mb-5">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-4"></div>
+                                <div class="col-md-6 col-lg-4">
+                                    <form id="reset">
+                                        <p class="text-center pb-3"> <b>A Password <i class="text-info">verification
+                                                    code</i> will be sent to your email address</b> </p>
+                                        <div class="md-form"> <input type="text"
+                                                class="form-control w-100 animated infinite" id="email" name="email"
+                                                placeholder="Your E-mail Address"> <span class="text-danger hide"
+                                                id="errorEmail"></span> </div>
+                                        <div class="text-center pt-2"> <button type="submit"
+                                                class="btn blue-gradient w-100 btn-rounded ml-0"> Send Code </button>
+                                        </div>
+                                    </form>
+                                    <div class="modal-footer pt-3 mb-1">
+                                        <p class="font-small grey-text text-right"> <span> <small>Not a member? <a
+                                                        href="/signup" class="blue-text ml-1"> Sign Up </a> </small>
+                                            </span> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="share">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<div class="card minimum">
+                    <div class="card-body woh-font">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1 class="text-center text-dark"> <b>Referral Code</b> </h1>
+                                <hr class="pb-4">
+                                <h3 class="text-center text-dark"> Your referral code: <br
+                                        class="hidden-xl hidden-lg hidden-md hidden-sm"> <b>{{loadCode}}</b> </h3>
+                                <!-- <h6 class="text-muted text-justify"> Please, Kindly Share this link with your friends to help us make this game more fun. </h6> -->
+                                <h3 class="text-left text-dark pt-5"> <b> Rules &amp; Rewards </b> </h3>
+                                <h6 class="text-dark text-justify pt-3">
+                                    <ul>{{#if currentUser}}<li class="pb-3"> <b> Players who used your code: <span
+                                                    class="text-info">{{codeSubject}}</span> </b> </li>{{/if}}<li
+                                            class="text-muted text-justify"> Your referral code is unique to your
+                                            account. Share it with friends, family, contacts and more. </li>
+                                        <li class="pt-3 text-muted text-justify"> Once a new Player creates an account
+                                            with your referral code, a part of his winning bonuses will be credited to
+                                            your account. <br>The more bonuses you get, the lower your total cost is.
+                                            <br><br><small> <b> Check the <a href="/help"
+                                                        class="myGames-link">manual</a> for more help </b> </small>
+                                        </li>
+                                    </ul>
+                                </h6>
+                                <!-- <p class="text-dark pt-2 text-center text-sm-left"> <span class="pb-2 myGames-link">https://ntavigwa.com</span> <br><button class="btn btn-info btn-sm ml-0">Copy this link</button> </p>-->
+                                <!-- <div class="row"> <div class="col-4 text-center pt-3"> <h1><i class="nc-icon nc-ambulance text-primary"></i></h1> <div class="md-form m-0"> <input type="text" class="form-control w-100" id="link-fb" name="link-fb" placeholder="Facebook Page" value="https://facebook.com/ntavigwa"> </div><button class="btn btn-info btn-sm">Follow Us</button> </div><div class="col-4 text-center pt-3"> <h1><i class="nc-icon nc-ambulance text-primary"></i></h1> <div class="md-form m-0"> <input type="text" class="form-control w-100" id="link-fb" name="link-fb" placeholder="Facebook Page" value="https://twitter.com/ntavigwa"> </div><button class="btn btn-info btn-sm">Follow Us</button> </div><div class="col-4 text-center pt-3"> <h1><i class="nc-icon nc-ambulance text-primary"></i></h1> <div class="md-form m-0"> <input type="text" class="form-control w-100" id="link-fb" name="link-fb" placeholder="Facebook Page" value="https://instagram.com/ntavigwa"> </div><button class="btn btn-info btn-sm">Follow Us</button> </div></div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="update">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<section class="form-elegant">
+                    <div class="card minimum">
+                        <div class="card-body woh-font">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-4"></div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="text-center">
+                                        <h1 class="mb-3"><b>Update Password</b></h1>
+                                    </div>
+                                    <form id="update">
+                                        <p class="text-muted text-center"> A code was sent to <b>{{loadEmail}}</b>.
+                                            <br><span class="text-dark"><b>Change your Password</b></span> </p>
+                                        <div class="md-form mb-2"> <input type="text"
+                                                class="form-control w-100 animated infinite" id="code" name="code"
+                                                placeholder="Confirmation Code"> <span class="text-danger hide"
+                                                id="errorCode"></span> </div>
+                                        <div class="md-form mb-2"> <input type="password" id="password"
+                                                class="form-control w-100 animated infinite" name="password"
+                                                placeholder="New Password"> <span class="text-danger hide"
+                                                id="errorPassword"></span> </div>
+                                        <div class="md-form mb-2"> <input type="password" id="confirm_password"
+                                                class="form-control w-100 animated infinite" name="confirm_password"
+                                                placeholder="Confirm New Password"> <span class="text-danger hide"
+                                                id="errorConfirm"></span> </div>
+                                        <div class="text-center pt-0 mt-0 mb-4"> <span class="pull-right pb-1"> <a
+                                                    href="/reset" class="myGames-link change-color"> <b><i>Re-Enter
+                                                            Email Address</i></b> </a> </span> <button type="submit"
+                                                class="btn blue-gradient w-100 btn-rounded ml-0 mr-0"> Update Password
+                                            </button> </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="terms">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-3 mb-4 animated pulse">{{> sidebar}}<div class="card">
+                    <div class="card-body woh-font">
+                        <h2 class="text-center pb-4">TERMS &amp; CONDITIONS</h2>
+                        <h6 class="text-dark"><b>User player obligations</b></h6>
+                        <hr> <small> <b class="text-dark">You hereby declare that:</b>
+                            <ol class="text-muted text-justify">
+                                <li> You are over 18 years of age or such higher minimum legal age of majority as
+                                    stipulated in the jurisdiction of your residence and are, under the laws applicable
+                                    to you, legally allowed to participate in the game offered on this platform. </li>
+                                <li> You participate in the game strictly in your personal non-professional capacity for
+                                    recreational and entertainment purposes only. </li>
+                                <li> You are solely responsible for reporting and accounting for any taxes applicable to
+                                    you under relevant laws for ay winnings that you receive from us. </li>
+                                <li> The cryptocurrency that you deposit into your account is not tainted with any
+                                    illegality and, in particular, does not originate from any illegal activity or
+                                    source. </li>
+                                <li> You understand that by participating in the game you take the risk of losing the
+                                    cryptocurrency deposited into your account. </li>
+                                <li> In relation to deposits and withdrawals of funds into and from your ntavigwa
+                                    Account, you shall only use cryptocurrency that are valid and lawfully belong to
+                                    you. </li>
+                                <li> You will not use our services while located in any jurisdiction that prohibits the
+                                    placing and/or accepting of bets denominated in cryptocurrency online. </li>
+                            </ol>
+                        </small>
+                        <h6 class="text-dark"><b>Your member Account</b></h6>
+                        <hr> <small>
+                            <ol class="text-muted text-justify">
+                                <li> In order for you to be able to place bets, you must first sign-up for an account.
+                                </li>
+                                <li> Account registration is free and does not require more credentials other that a
+                                    valid email address and a password. </li>
+                                <li> You must enter a valid email address during the sign-up process. If you do not
+                                    enter a valid email address, we will be unable to help you recover any “forgotten
+                                    passwords” and we reserve the right to cancel your account at any point we deem
+                                    necessary. It is your sole responsibility to ensure that the information you provide
+                                    is true, complete and correct. </li>
+                                <li> You must enter a valid email address during the sign-up process. If you do not
+                                    enter a valid email address, we will be unable to help you recover any “forgotten
+                                    passwords” and we reserve the right to cancel your account at any point we deem
+                                    necessary. It is your sole responsibility to ensure that the information you provide
+                                    is true, complete and correct. </li>
+                                <li> As part of the registration process, you will have to choose a username and
+                                    password for your login into our website. It is your sole and exclusive
+                                    responsibility to ensure that you login details are kept securely. You must not
+                                    disclosure your login details to anyone. We are not responsible for ay abuse or
+                                    misuse of your account by third parties due to your disclosure, whether intentional
+                                    or accidental, whether active or passive, of your login details to any third party.
+                                </li>
+                                <li> ntavigwa reserves the right to refuse or close an account at its sole
+                                    discretion, but any contractual obligations already made by ntavigwa shall be
+                                    honored accordingly. </li>
+                                <li> You are allowed to have only one account per IP / Household / Family / Person. Any
+                                    attempt to have more than one account, may be blocked or closed and any bets and
+                                    remaining funds may be voided. </li>
+                                <li> Account disclosure can be done through our contact form, at any time, mentioning
+                                    the reasoning behind the request. </li>
+                                <li> You can only reset your password account 3 times in a single day. If you reach that
+                                    limit, no reset code will be sent to your email address and you will be forced to
+                                    wait until the beginning of the next day to that day. </li>
+                            </ol>
+                        </small>
+                        <h6 class="text-dark"><b> Deposits and Withdrawals to/from User Account</b></h6>
+                        <hr> <small>
+                            <ol class="text-muted text-justify">
+                                <li> To deposit funds into your account, you can transfer funds from your personal
+                                    cryptocurrency wallets or other cryptocurrency related accounts. Every transfer send
+                                    to a different address than the one displayed in the deposit, will not be added.
+                                </li>
+                                <li> In the instance that a deposit is unable to be verified by the cryptocurrency
+                                    chain/network within a reasonable amount period, it will be considered as fraud.
+                                    Your account will be temporarily closed and all costs incurred by ntavigwa,
+                                    including affiliate commissions and ntavigwa administrative costs associated with
+                                    these transactions will be noted to your account. </li>
+                                <li> ntavigwa reserves the right to use additional procedures and means to verify
+                                    your identity, in case of higher deposits, to prevent money laundering. </li>
+                                <li> If we mistakenly credit your ntavigwa account with amounts that do not belong to
+                                    you, whether due to a technical error in the pay-tables or human error or otherwise,
+                                    the amou nt will remain our property and will be deducted from your account balance.
+                                    If you have withdrawn funds that do not belong to you, the mistakenly credited
+                                    amount will constitute a debt owed by you to us. In the event of an incorrect
+                                    crediting, you are obliged to notify us immediately in the contact form. </li>
+                                <li> ntavigwa reserves the right to check your e-mail address prior to processing
+                                    payouts and to hold withdrawals for the time needed to verify your email address.
+                                    Make sure you provide a valid email address while creating your WOH account
+                                    otherwise, there is no way you will be able to withdraw your money. </li>
+                                <li> The maximum daily withdraw is around 10 requests per day. If your reach your daily
+                                    max withdraw limit, you will be able to withdraw again on the beginning of next day
+                                    to that day. </li>
+                            </ol>
+                        </small>
+                        <h6 class="text-dark"><b> Prohibited </b></h6>
+                        <hr> <small>
+                            <ol class="text-muted text-justify">
+                                <li> On ntavigwa it’s strictly prohibited to use any VPN (proxy) software or tool
+                                    that hides your location. </li>
+                                <li> The ntavigwa user is only allowed to play for his/her personal entertainment and
+                                    may not create multiple accounts for the purpose of collusion and/or abuse of
+                                    service. </li>
+                                <li> ntavigwa prohibits player collision and do not allow any kind of robots and
+                                    programmed devices to participate in the game play. We reserve the right to void any
+                                    game play which results from the use of robots and/or programmed devices. </li>
+                                <li> ntavigwa is not an exchange/trade service, therefore any abuse will immediately
+                                    bring the suspension of your account and loss of all funds. </li>
+                                <li> It is strictly forbidden to use offensive language or harass our Support Team in
+                                    the contact Form. Crude behavior can bring the termination of your account. </li>
+                                <li> It is strictly forbidden to create a new challenge on our platform with the
+                                    intention of not playing any game in it. Any abuse will immediately bring the
+                                    suspension of your account and loss of all funds. </li>
+                            </ol>
+                        </small>
+                        <h6 class="text-dark"><b> More </b></h6>
+                        <hr> <small>
+                            <ol class="text-muted text-justify pb-4">
+                                <li> As a user on our platform, you agree that these terms and conditions provided above
+                                    can be changed at any time without any agreement from you. </li>
+                            </ol>
+                        </small>
+                        <p class="text-dark text-center">
+                            <script>// let xTerms=new Date().getFullYear(); document.getElementById('year').innerHTML=new Date().getFullYear();; </script>
+                            <b> ntavigwa &copy; <span id="year"></span> all rights reserved </b> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
